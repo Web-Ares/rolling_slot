@@ -28,22 +28,16 @@
 }
 /* --------------- /placeholder --------------- */
 
-/* --------------- fonts --------------- */
-@font-face {
-    font-family: "Font Name";
-    src: url("../fonts/font.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-/* --------------- /fonts --------------- */
-
 /* --------------- site --------------- */
 .site {
+    font-family:'Roboto', sans-serif;
     min-height: 100%;
-    min-width: 1000px;
+    min-width:320px;
     overflow: hidden;
     position: relative;
     z-index: 1;
+    background: #14111b;
+
 }
 .site:after {
     content: '';
@@ -59,7 +53,7 @@
 }
 .site__header {
     position: relative;
-
+    margin-bottom: 10px;
     height: 100px;
     background: red;
     z-index: 3;
@@ -88,3 +82,263 @@
     left: 0;
 }
 /* --------------- /logo --------------- */
+
+/* --------------- slider --------------- */
+.slider{
+    position: relative;
+    width: 100%;
+    padding: 0 7px;
+    height: 40px;
+    border-bottom: 2px solid #292436;
+    border-top: 2px solid #292436;
+    margin-bottom: 20px;
+}
+.slider__layout{
+    padding: 10px;
+    height: 40px;
+    text-align: center;
+}
+.slider__item{
+    font-family:'Roboto', sans-serif;
+    color: #bd0031;
+    font-size: 13px;
+}
+.item_active{
+    font-family:'Roboto Black', sans-serif;
+    font-weight: 700;
+}
+.swiper-button-next,
+.swiper-button-prev{
+    position: absolute;
+    top: 31px;
+    width:10px;
+    height: 17px;
+    background: url("../img/slider-left.png") no-repeat center;
+    background-size: contain;
+}
+.swiper-button-prev{
+    left: 0;
+}
+.swiper-button-next{
+    background: url("../img/slider-right.png") no-repeat center;
+    background-size: contain;
+    right: 0;
+}
+/* --------------- slider --------------- */
+
+/* --------------- slots --------------- */
+.slots{
+    text-align: center;
+}
+.slots__item{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 5px 10px 5px;
+    width: 189px;
+    height: 158px;
+    border: 2px solid #292436;
+    text-align: center;
+}
+.slots__item a{
+    display: block;
+    padding: 5px 5px 0 5px;
+}
+.slots__pic{
+    width: 100%;
+    height: 116px;
+    margin-bottom: 7px;
+}
+.slots__pic img{
+    width: 100%;
+    height: 100%;
+}
+.slots__title{
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: color .3s ease;
+}
+.slots__item:hover .slots__title{
+    position: absolute;
+    color: #9b032c;
+    z-index: 3;
+    width: 100%;
+    left: 0;
+    cursor: default;
+}
+.slots__item:hover .slots__hover{
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+}
+.slots__hover {
+    width: 189px;
+    height: 155px;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    background: url("../img/slots-hover.png") no-repeat center;
+    background-size: cover;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    top: -1px;
+    cursor: default;
+}
+.slots__hover span{
+    display: inline-block;
+    margin-top: 64px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: color .3s ease;
+}
+.slots__hover span:hover{
+    color: #9b032c;
+}
+/* --------------- /slots --------------- */
+
+/* --------------- navigation --------------- */
+.navigation{
+    position: relative;
+    display: block;
+    text-align: center;
+}
+.navigation__next,
+.navigation__prev{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 32px;
+    height: 35px;
+    background: #7d0223;
+    transition: opacity .3s ease;
+}
+.navigation__next{
+    margin-right: 0;
+}
+.navigation__next:hover,
+.navigation__prev:hover{
+    opacity: 0.7;
+}
+.navigation__next{
+
+ }
+.navigation__next:before,
+.navigation__prev:before{
+    content:"";
+    position: absolute;
+    width: 12px;
+    height: 18px;
+    top: 8px;
+    left: 9px;
+    background: url("../img/left.png") no-repeat center;
+    background-size: contain;
+}
+.navigation__next:before{
+    background: url("../img/right.png") no-repeat center;
+    background-size: contain;
+}
+.navigation__item{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 11px;
+    font-size: 13px;
+    color:#fff;
+    transition: color .3s ease, font-size .3s ease;
+    text-align: center;
+}
+.navigation__item:hover{
+    color: #7d0223;
+}
+.navigation .active{
+    color: #7d0223;
+    font-size: 17px;
+    font-weight: 700;
+}
+/* --------------- /navigation --------------- */
+@media (min-width: 768px){
+
+    /* --------------- slots --------------- */
+    .slots__item {
+        width: 229px;
+        height: 185px;
+    }
+    .slots__title {
+        font-size: 15px;
+    }
+    .slots__pic{
+        height: 139px;
+        margin-bottom: 9px;
+    }
+    .slots__hover {
+        width: 225px;
+        height: 183px;
+    }
+    .slots__hover span {
+        margin-top: 74px;
+        font-size: 18px;
+    }
+    /* --------------- /slots --------------- */
+
+    /* --------------- navigation --------------- */
+    .navigation__item {
+        margin-right: 16px;
+        font-size: 20px;
+    }
+    .navigation__next,
+    .navigation__prev {
+        margin-right: 60px;
+        width: 40px;
+        height: 40px;
+    }
+    .navigation__next{
+        margin-right: 0;
+        margin-left: 44px;
+    }
+    .navigation__next:before, .navigation__prev:before {
+        width: 13px;
+        height: 22px;
+        top: 9px;
+        left: 13px;
+    }
+    .navigation .active{
+        font-size: 28px;
+    }
+    /* --------------- /navigation --------------- */
+
+    }
+
+@media (min-width: 1024px) {
+    /* --------------- slots --------------- */
+    .slots__item {
+        width:434px;
+        height: 370px;
+        padding: 10px;
+    }
+    .slots__title {
+        font-size: 30px;
+    }
+    .slots__pic{
+        height: 278px;
+        margin-bottom: 26px;
+    }
+    .slots__hover {
+        width: 430px;
+        height: 368px;
+    }
+    .slots__hover span {
+        margin-top: 166px;
+    }
+    /* --------------- /slots --------------- */
+}

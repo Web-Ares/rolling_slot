@@ -1,36 +1,51 @@
 $(function(){
 
+    $('.swiper-container').each(function () {
+        Slider($(this));
+    });
+
+
 } );
 
-var Shablon = function (obj) {
-    this.obj = obj;
+var Slider = function (obj) {
 
+    //private properties
+    var _self = this,
+        _next = obj.find($('.swiper-button-next')),
+        _prev = obj.find($('.swiper-button-prev')),
+        _obj = obj;
 
-    this.init();
-};
-Shablon.prototype = {
-    init: function () {
-        var self = this;
+    //private methods
+    var _addEvents = function () {
 
-        self.core = self.core();
-        self.core.build();
-    },
-    core: function () {
-        var self = this;
-
-        return {
-            addEvents: function () {
-
-            },
-            build: function () {
-                self.core.addEvents();
-            }
+        },
+        _init = function () {
+            _addEvents();
         };
-    }
-};
+    if (_obj.hasClass('slider__wrap')) {
+        var _swiperPromo = new Swiper(_obj, {
+            nextButton: _next,
+            prevButton: _prev,
+            slidesPerView: 7,
+            spaceBetween: 0,
+            loop: false,
+            breakpoints: {
 
-$(window).on({
-    load: function () {
-        
+                1024: {
+                    slidesPerView: 5
+                },
+                768: {
+                    slidesPerView: 3
+                }
+            }
+
+
+        });
     }
-});
+
+    //public properties
+
+    //public methods
+
+    _init();
+};
