@@ -5,7 +5,7 @@
 
 /*
     main styles
-    version: 15.01.2013
+    version: 23.12.2015
 
     placeholder
 
@@ -18,13 +18,30 @@
 
 /* --------------- placeholder --------------- */
 ::-webkit-input-placeholder {
-    color: #000;
+    color: #ccc;
+    -webkit-transition: color 300ms ease-in-out;
 }
 :-moz-placeholder {
-    color: #000;
+    color: #ccc;
+    -webkit-transition: color 300ms ease-in-out;
+    transition: color 300ms ease-in-out;
 }
 .placeholder {
-    color: #000;
+    color: #ccc;
+    -webkit-transition: color 300ms ease-in-out;
+    transition: color 300ms ease-in-out;
+}
+:focus::-webkit-input-placeholder {
+    color: transparent
+}
+:focus::-moz-placeholder {
+    color: transparent
+}
+:focus:-moz-placeholder {
+    color: transparent
+}
+:focus:-ms-input-placeholder {
+    color: transparent
 }
 /* --------------- /placeholder --------------- */
 body {
@@ -47,8 +64,7 @@ body {
     overflow: hidden;
     position: relative;
     z-index: 1;
-    background: #14111b;
-
+    background-color: #14111b;
 }
 .site__aside {
     display: none;
@@ -58,8 +74,13 @@ body {
     display: block;
     clear: both;
     width: 100%;
-
-    height: 100px;
+    height: 153px;
+}
+.site__title{
+    margin: 30px 11px 15px;
+    font-size: 16px;
+    color: #cac6d5;
+    text-transform: uppercase;
 }
 .site__content {
     position: relative;
@@ -75,11 +96,15 @@ body {
 }
 .site__header {
     position: relative;
-    margin-bottom: 10px;
-    height: 100px;
-    background: red;
-    z-index: 3;
-
+    height: 35px;
+    background-color: #1c1622;
+    z-index: 4;
+}
+.site__header-layout{
+    position: relative;
+    max-width: 960px;
+    height: inherit;
+    margin: 0 auto;
 }
 .site__footer {
     z-index: 2;
@@ -101,9 +126,277 @@ body {
 .logo {
     position: absolute;
     top: 0;
+    left: 50%;
+    height: 45px;
+    margin-left: -112px;
+    padding-top: 9px;
+    padding-left: 62px;
+}
+.logo:before {
+    content: '';
+    position: absolute;
+    top: 0;
     left: 0;
+    width: 64px;
+    height: 40px;
+    background: url("../img/bg-header.png") no-repeat 0 -2px/63px 46px;
+}
+.logo img{
+    height: 100%;
 }
 /* --------------- /logo --------------- */
+
+/* --------------- menu --------------- */
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 45px;
+}
+.menu__wrap{
+    position: absolute;
+    top: 36px;
+    width: 133px;
+    padding-top: 14px;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility .3s ease;
+    -webkit-transition: opacity .3s ease, visibility .3s ease;
+    box-shadow: 1px 1px 1px #ccc;
+}
+.menu.active .menu__wrap{
+    opacity: 1;
+    visibility: visible;
+}
+.menu__wrap a,
+.menu__aside a{
+    display: block;
+    position: relative;
+    height: 24px;
+    margin-top: -2px;
+    padding: 8px 3px 6px 8px;
+    font-size: 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #6a828a;
+    transition: background-color .3s ease, color .3s ease;
+    -webkit-transition: background-color .3s ease, color .3s ease;
+}
+.menu__wrap > a{
+    color: #0098ff;
+}
+.menu__wrap a:after,
+.menu__aside a:after{
+    content: '';
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    top: 0;
+    border-bottom: 2px dotted #dcdee5;
+    z-index: 2;
+}
+.menu__wrap ul{
+    padding: 5px 0;
+}
+.menu__btn:hover,
+.menu.active .menu__btn{
+    background: #bd0031;
+}
+.menu__btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 43px;
+    height: 36px;
+    padding: 0 12px 2px;
+    border: none;
+    background: none;
+    transition: background .3s ease;
+    -webkit-transition: background .3s ease;
+}
+.menu__btn > span,
+.menu__btn > span:before,
+.menu__btn > span:after{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #bd0031;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.menu__btn:hover > span,
+.menu.active .menu__btn > span,
+.menu__btn:hover > span:before,
+.menu.active .menu__btn > span:before,
+.menu__btn:hover > span:after,
+.menu.active .menu__btn > span:after{
+    background-color: #cac6d5;
+}
+.menu__btn > span:before,
+.menu__btn > span:after {
+    content: '';
+    position: absolute;
+    left: 0;
+}
+.menu__btn > span:after {
+    top: 230%;
+}
+.menu__btn > span:before {
+    bottom: 240%;
+}
+.menu__aside dd{
+    font-size: 16px;
+}
+.menu__aside dt{
+    height: 18px;
+    margin-bottom: 2px;
+    padding-top: 4px;
+    font-size: 12px;
+    color: #f8f3f1;
+    background-color: #0098ff;
+    text-transform: uppercase;
+    text-align: center;
+}
+.menu__wrap dd a,
+.menu__aside dd > a{
+    font-size: 10px;
+    padding-left: 8px;
+}
+.menu__aside dl dt+dd a:after{
+    display: none;
+}
+.menu__aside dl dd > a:hover,
+.menu__aside dl dd.active > a{
+    color: #000;
+    background-color: #e9e8e8;
+}
+.menu__aside dl ul{
+    display: none;
+    position: relative;
+    top: -2px;
+    overflow: hidden;
+}
+.menu__wrap ul:after,
+.menu__aside ul:after{
+    content: '';
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    top: 0;
+    border-bottom: 2px dotted #dcdee5;
+    z-index: 2;
+}
+.menu__aside li a,
+.menu__wrap li a{
+    padding-left: 23px;
+    font-size: 10px;
+    transition: color .3s ease;
+    -webkit-transition: color .3s ease;
+}
+.menu__aside li a:hover,
+.menu__wrap li a:hover{
+    color: #0098ff;
+}
+.menu__wrap li a:after,
+.menu__aside li a:after{
+    display: none;
+}
+.menu.active .menu__wrap a.btn_aside{
+    padding-left: 0;
+    margin-top: 15px;
+}
+.menu.active .menu__wrap dl dd:first-child a:after{
+    display: none;
+}
+.menu.active .menu__wrap a.btn_aside:after{
+    display: none;
+}
+/* --------------- /menu --------------- */
+
+/* --------------- search --------------- */
+.search{
+    float: right;
+    width: 35px;
+    height: 45px;
+    cursor: pointer;
+}
+.search:before{
+    content: '';
+    display: block;
+    margin-top: 12px;
+    margin-left: 9px;
+    width: 17px;
+    height: 17px;
+    background: url("../img/icons-lupa-res.png") no-repeat 0 0/17px 17px;
+    opacity: 1;
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease
+}
+.search:hover:before{
+    opacity: 0;
+}
+.search__btn{
+    position: relative;
+    top: -16px;
+    left: 9px;
+    width: 16px;
+    height: 17px;
+}
+.search:hover .search__btn:before,
+.search:hover .search__btn:after{
+    left: 10px;
+    height: 17px;
+    opacity: 1;
+}
+.search:hover .search__btn:before{
+    transform: rotate(-45deg);
+}
+.search:hover .search__btn:after{
+    transform: rotate(45deg);
+}
+.search__frame{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 6px 13px 9px;
+    background-color: #919aa4;
+    cursor: default;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity.3s ease, visibility .3s ease;
+    -webkit-transition: opacity.3s ease, visibility .3s ease;
+}
+.search:hover .search__frame{
+    opacity: 1;
+    visibility: visible;
+}
+.search__frame input{
+    height: 29px;
+    width: 100%;
+    padding: 0 30px 0 5px;
+    border: 1px solid #7d8d96;
+    border-radius: 2px;
+    font: 10px 'helvetica-regular', sans-serif;
+}
+.search__frame button{
+    position: absolute;
+    top: 6px;
+    right: 15px;
+    width: 20px;
+    height: 29px;
+    border: none;
+    background: url("../img/icon-search-black.png") no-repeat 0 5px/17px 18px;
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+}
+.search__frame button:hover{
+
+}
+/* --------------- /search --------------- */
 
 /* --------------- header-slider --------------- */
 .header-slider{
@@ -292,6 +585,126 @@ body {
 
 @media (min-width: 768px){
 
+    /* --------------- site --------------- */
+    .site__header {
+        height: 53px;
+    }
+    .site:after{
+        height: 280px;
+    }
+    /* --------------- /site --------------- */
+
+    /* --------------- logo --------------- */
+    .logo {
+        height: 55px;
+        margin-left: -224px;
+        padding-top: 2px;
+        padding-left: 97px;
+    }
+    .logo:before {
+        width: 105px;
+        height: 48px;
+        background-position: 0 -8px;
+        background-size: 105px 71px;
+    }
+    /* --------------- /logo --------------- */
+
+    /* --------------- menu --------------- */
+    .menu{
+        height: 48px;
+    }
+    .menu__btn{
+        top: 8px;
+        left: 15px;
+        height: 40px;
+        width: 49px;
+        padding: 0 13px 5px;
+    }
+    .menu__btn > span,
+    .menu__btn > span:before,
+    .menu__btn > span:after{
+        height: 3px;
+    }
+    .menu__wrap{
+        left: 15px;
+        width: 155px;
+        padding-top: 21px;
+    }
+    .menu__wrap > a{
+        height: 26px;
+        padding-top: 5px;
+        font-size: 15px;
+    }
+    .menu__wrap dd a{
+        height: 25px;
+        padding-top: 8px;
+    }
+    .menu__aside dl ul{
+        padding-top: 5px;
+        padding-bottom: 9px;
+    }
+    .menu__wrap li a{
+        height: 20px;
+    }
+    .menu__aside dt{
+        margin-bottom: 5px;
+        padding-top: 2px;
+        font-size: 14px;
+    }
+    .menu__home{
+        position: absolute;
+        top: 7px;
+        left: 81px;
+        vertical-align: middle;
+        width: 47px;
+        height: 42px;
+        margin-right: 15px;
+        border-radius: 5px 5px 0 0;
+        background: url("../img/icon-home.png") no-repeat 50% 7px/22px;
+        transition: background-color .3s ease;
+        -webkit-transition: background-color .3s ease;
+    }
+    .menu__home:hover{
+        background-color:  #0098ff;
+    }
+    .menu__wrap dd a,
+    .menu__aside dd > a{
+        font-size: 12px;
+    }
+    /* --------------- /menu --------------- */
+
+    /* --------------- search --------------- */
+    .search{
+        width: 215px;
+    }
+    .search:before,
+    .search__btn{
+        display: none;
+    }
+    .search__frame{
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 100%;
+        padding: 5px 13px 9px 18px;
+        background-color: transparent;
+        opacity: 1;
+        visibility: visible;
+    }
+    .search__frame input{
+        height: 36px;
+        font-size: 12px;
+    }
+    .search__frame button {
+        top: 5px;
+        right: 19px;
+        width: 23px;
+        height: 34px;
+        background-size: 20px 21px;
+        background-position: 3px 8px;
+    }
+    /* --------------- /search --------------- */
+
     /* --------------- site__content --------------- */
     .site__content-layout {
         width: 768px;
@@ -352,7 +765,146 @@ body {
     }
     /* --------------- /navigation --------------- */
 
+}
+
+@media (min-width: 950px) {
+
+    /* --------------- site --------------- */
+    .site:after{
+        height: 186px;
     }
+    .site__header{
+        height: 61px;
+        border-bottom-width: 3px;
+    }
+    .site__aside{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        display: block;
+        width: 208px;
+        padding-top: 158px;
+        box-shadow: 0 0 7px #ccc;
+        background-color: #fff;
+    }
+    /* --------------- /site --------------- */
+
+    /* --------------- logo --------------- */
+    .logo{
+        position: absolute;
+        top: 17px;
+        left: 0;
+        margin: 0;
+        padding: 0;
+    }
+    .logo:before{
+        width: 208px;
+        height: 182px;
+        background: url("../img/logo-big.png") no-repeat 6px 4px/194px 178px;
+    }
+    .logo img{
+        display: none;
+    }
+    /* --------------- /logo --------------- */
+
+    /* --------------- menu --------------- */
+    .menu{
+        margin-top: 6px;
+        margin-left: 210px;
+        z-index: 2;
+    }
+    .menu__btn{
+        display: none;
+    }
+    .menu__wrap{
+        display: inline-block;
+        vertical-align: top;
+        position: static;
+        width: auto;
+        padding-top: 0;
+        background: transparent;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+    }
+    .menu__wrap > a{
+        display: inline-block;
+        height: auto;
+        padding-top: 19px;
+        padding-left: 0;
+        font-size: 18px;
+        margin-right: 27px;
+        color: #0098ff;
+        transition: color .3s ease;
+        -webkit-transition: color .3s ease;
+    }
+    .menu__wrap a:hover{
+        color: #f8f3f1;
+    }
+    .menu__wrap > a:after{
+        display: none;
+    }
+    .menu__wrap .menu__aside{
+        display: none;
+    }
+    .menu__aside dt{
+        height: 34px;
+        margin-bottom: 9px;
+        padding-top: 8px;
+        font-size: 18px;
+    }
+    .menu__wrap dd a,
+    .menu__aside dd > a {
+        display: block;
+        height: 29px;
+        font-size: 15px;
+        padding-top: 9px;
+        padding-left: 16px;
+    }
+    .menu__aside ul{
+        padding: 5px 0;
+    }
+    .menu__aside li a,
+    .menu__wrap li a{
+        height: 27px;
+        font-size: 13px;
+        padding-left: 33px;
+    }
+    .menu__aside .btn_aside{
+        height: 33px;
+        margin-top: 15px;
+        padding-top: 9px;
+        padding-left: 0;
+        font-size: 15px;
+    }
+    .menu__aside .btn_aside:after{
+        display: none;
+    }
+    .menu__home{
+        position: static;
+        display: inline-block;
+        width: 61px;
+        height: 53px;
+        background-size: auto;
+        vertical-align: middle;
+    }
+    /* --------------- /menu --------------- */
+
+    /* --------------- search --------------- */
+    .search__frame{
+        padding: 13px 0 9px 53px;
+    }
+    .search__frame button {
+        top: 11px;
+        right: 3px;
+        width: 29px;
+        height: 32px;
+        background-size: 22px 23px;
+    }
+    /* --------------- /search --------------- */
+
+}
 
 @media (min-width: 1024px) {
 
@@ -435,4 +987,5 @@ body {
         right: 0;
     }
     /* --------------- slider --------------- */
+
 }
