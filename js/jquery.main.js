@@ -43,7 +43,7 @@ var Slider = function (obj) {
         });
 
     }
-    if (_obj.hasClass('slider__wrap')) {
+    if (_obj.hasClass('container_wrap')) {
         var _slider = new Swiper(_obj, {
             nextButton: '.slider_next',
             prevButton: '.slider_prev',

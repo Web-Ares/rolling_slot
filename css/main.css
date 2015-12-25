@@ -27,6 +27,15 @@
     color: #000;
 }
 /* --------------- /placeholder --------------- */
+body {
+    line-height: 1;
+    color: #fff;
+    text-align: left;
+    z-index: 1;
+    position: relative;
+    background: #0b060e url("../img/body_bg.png") no-repeat center;
+    background-size: cover;
+}
 .slider{
     display: none;
 }
@@ -41,6 +50,9 @@
     background: #14111b;
 
 }
+.site__aside {
+    display: none;
+}
 .site:after {
     content: '';
     display: block;
@@ -52,6 +64,14 @@
 .site__content {
     position: relative;
     z-index: 2;
+}
+.site__content-layout {
+    width: 320px;
+    margin: 0 auto;
+    padding: 0 6.5px;
+}
+.site__wrap-center {
+    margin-bottom: 11px;
 }
 .site__header {
     position: relative;
@@ -272,6 +292,18 @@
 
 @media (min-width: 768px){
 
+    /* --------------- site__content --------------- */
+    .site__content-layout {
+        width: 768px;
+        padding: 0 18.5px;
+    }
+    .site__aside {
+        width: 685px;
+        margin-left: 34px;
+        margin-bottom: 55px;
+    }
+    /* --------------- /site__content --------------- */
+
     /* --------------- slots --------------- */
     .slots__item {
         width: 229px;
@@ -323,6 +355,18 @@
     }
 
 @media (min-width: 1024px) {
+
+    /* --------------- site__content --------------- */
+    .site__content-layout {
+        width: 1003px;
+        padding: 0;
+    }
+    .site__aside {
+        margin-left: 0;
+        width: 224px;
+    }
+    /* ---------------/site__content--------------- */
+
     /* --------------- slots --------------- */
     .slots__item {
         width:434px;
@@ -349,20 +393,23 @@
     .slider{
         display: block;
         position: relative;
-        max-width: 1000px;
-        margin: 0 auto;
+        width: 100%;
         padding: 0;
-        height: 170px;
         margin-bottom: 20px;
         background: #120e18;
-        padding-top: 56px;
     }
     .slider__wrap{
+        position: relative;
+        max-width: 1000px;
+        margin: 0 auto;
+        height: 170px;
+        padding-top: 56px;
+    }
+    .container_wrap{
         width: 920px;
     }
     .slider  .slider__layout{
         padding: 10px;
-        height: 170px;
         text-align: center;
     }
     .slider .slider__item{
