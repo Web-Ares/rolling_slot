@@ -27,7 +27,9 @@
     color: #000;
 }
 /* --------------- /placeholder --------------- */
-
+.slider{
+    display: none;
+}
 /* --------------- site --------------- */
 .site {
     font-family:'Roboto', sans-serif;
@@ -83,8 +85,8 @@
 }
 /* --------------- /logo --------------- */
 
-/* --------------- slider --------------- */
-.slider{
+/* --------------- header-slider --------------- */
+.header-slider{
     position: relative;
     width: 100%;
     padding: 0 7px;
@@ -93,12 +95,12 @@
     border-top: 2px solid #292436;
     margin-bottom: 20px;
 }
-.slider__layout{
+.header-slider  .slider__layout{
     padding: 10px;
     height: 40px;
     text-align: center;
 }
-.slider__item{
+.header-slider .slider__item{
     font-family:'Roboto', sans-serif;
     color: #bd0031;
     font-size: 13px;
@@ -107,8 +109,8 @@
     font-family:'Roboto Black', sans-serif;
     font-weight: 700;
 }
-.swiper-button-next,
-.swiper-button-prev{
+.button_next,
+.button_prev{
     position: absolute;
     top: 31px;
     width:10px;
@@ -116,15 +118,15 @@
     background: url("../img/slider-left.png") no-repeat center;
     background-size: contain;
 }
-.swiper-button-prev{
+.button_prev{
     left: 0;
 }
-.swiper-button-next{
+.button_next{
     background: url("../img/slider-right.png") no-repeat center;
     background-size: contain;
     right: 0;
 }
-/* --------------- slider --------------- */
+/* --------------- header-slider --------------- */
 
 /* --------------- slots --------------- */
 .slots{
@@ -172,7 +174,7 @@
     transform: scaleY(1);
 }
 .slots__hover {
-    width: 189px;
+    width: 185px;
     height: 155px;
     -webkit-transform-origin: 0 100%;
     transform-origin: 0 100%;
@@ -267,6 +269,7 @@
     font-weight: 700;
 }
 /* --------------- /navigation --------------- */
+
 @media (min-width: 768px){
 
     /* --------------- slots --------------- */
@@ -341,4 +344,48 @@
         margin-top: 166px;
     }
     /* --------------- /slots --------------- */
+
+    /* --------------- slider --------------- */
+    .slider{
+        display: block;
+        position: relative;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0;
+        height: 170px;
+        margin-bottom: 20px;
+        background: #120e18;
+        padding-top: 56px;
+    }
+    .slider__wrap{
+        width: 920px;
+    }
+    .slider  .slider__layout{
+        padding: 10px;
+        height: 170px;
+        text-align: center;
+    }
+    .slider .slider__item{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .slider_next,
+    .slider_prev{
+        position: absolute;
+        top: 50%;
+        margin-top: -21px;
+        width:22px;
+        height: 42px;
+        background: url("../img/wrap-slider-left.png") no-repeat center;
+        background-size: contain;
+    }
+    .slider_prev{
+        left: 0;
+    }
+    .slider_next{
+        background: url("../img/wrap-slider-right.png") no-repeat center;
+        background-size: contain;
+        right: 0;
+    }
+    /* --------------- slider --------------- */
 }

@@ -22,7 +22,7 @@ var Slider = function (obj) {
         _init = function () {
             _addEvents();
         };
-    if (_obj.hasClass('slider__wrap')) {
+    if (_obj.hasClass('header-slider__wrap')) {
         var _swiperPromo = new Swiper(_obj, {
             nextButton: _next,
             prevButton: _prev,
@@ -41,7 +41,21 @@ var Slider = function (obj) {
 
 
         });
+
     }
+    if (_obj.hasClass('slider__wrap')) {
+        var _slider = new Swiper(_obj, {
+            nextButton: '.slider_next',
+            prevButton: '.slider_prev',
+            spaceBetween: 0,
+            loop: false,
+            loopedSlides: 3,
+            slidesPerView: 6
+
+        });
+
+    }
+
 
     //public properties
 
