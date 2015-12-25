@@ -44,15 +44,6 @@
     color: transparent
 }
 /* --------------- /placeholder --------------- */
-body {
-    line-height: 1;
-    color: #fff;
-    text-align: left;
-    z-index: 1;
-    position: relative;
-    background: #0b060e url("../img/body_bg.png") no-repeat center;
-    background-size: cover;
-}
 .slider{
     display: none;
 }
@@ -64,7 +55,8 @@ body {
     overflow: hidden;
     position: relative;
     z-index: 1;
-    background-color: #14111b;
+    background: #0b060e url("../img/body_bg.png") no-repeat center;
+    background-size: cover;
 }
 .site:after {
     content: '';
@@ -84,7 +76,7 @@ body {
     z-index: 2;
 }
 .site__content-layout {
-    width: 320px;
+    max-width: 945px;
     margin: 0 auto;
     padding: 0 6.5px;
 }
@@ -436,15 +428,23 @@ body {
 .slots{
     text-align: center;
 }
+.slots ul{
+    margin-bottom: 20px;
+}
 .slots__item{
+    display: none;
     position: relative;
-    display: inline-block;
     vertical-align: top;
-    margin: 0 3px 6px 3px;
+    margin: 0 3px 9px 3px;
     width: 189px;
     height: 158px;
     border: 2px solid #292436;
     text-align: center;
+}
+.slots ul li:nth-child(1),
+.slots ul li:nth-child(2),
+.slots ul li:nth-child(3){
+    display: inline-block;
 }
 .slots__item a{
     display: block;
@@ -518,6 +518,7 @@ body {
     position: relative;
     display: block;
     text-align: center;
+    margin-bottom: 20px;
 }
 .navigation__next,
 .navigation__prev{
@@ -695,13 +696,13 @@ body {
 
     /* --------------- site__content --------------- */
     .site__content-layout {
-        width: 768px;
-        padding: 0 18.5px;
+        padding: 0 5px;
     }
     /* --------------- /site__content --------------- */
 
     /* --------------- slots --------------- */
     .slots__item {
+        display: inline-block;
         width: 229px;
         height: 185px;
     }
@@ -893,13 +894,12 @@ body {
 
     /* --------------- site__content --------------- */
     .site__content-layout {
-        width: 1003px;
         padding: 0;
     }
     .site__wrap-center {
         margin-bottom: 11px;
         max-width: 721px;
-        margin-left: 274px;
+        margin-left: 229px;
     }
     /* ---------------/site__content--------------- */
 
