@@ -56,7 +56,6 @@ var Slider = function (obj) {
 
     }
 
-
     //public properties
 
     //public methods

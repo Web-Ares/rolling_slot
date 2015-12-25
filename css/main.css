@@ -289,9 +289,7 @@ body {
     font-weight: 700;
 }
 /* --------------- /navigation --------------- */
-
 @media (min-width: 768px){
-
     /* --------------- site__content --------------- */
     .site__content-layout {
         width: 768px;
