@@ -58,13 +58,6 @@
     background: #0b060e url("../img/body_bg.png") no-repeat center;
     background-size: cover;
 }
-.site:after {
-    content: '';
-    display: block;
-    clear: both;
-    width: 100%;
-    height: 153px;
-}
 .site__title{
     margin: 30px 11px 15px;
     font-size: 16px;
@@ -98,17 +91,9 @@
 }
 .site__footer {
     z-index: 2;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100px;
+    background-color: #1f1c26;
 }
 .site__footer-layout {
-    width: 100%;
-
-    height: 100px;
-    background: blue;
 }
 /* --------------- /site --------------- */
 
@@ -588,12 +573,18 @@
         height: 3px;
     }
     .menu__wrap{
+        top: 40px;
         width: 196px;
-        padding-top: 19px;
+        padding-top: 15px;
     }
     .menu__wrap > a{
         font-size: 14px;
         margin: 23px 23px 29px;
+    }
+    .menu__aside dt{
+        margin-left: 32px;
+        font-size: 14px;
+        color: #fff;
     }
     /* --------------- /menu --------------- */
 
@@ -830,7 +821,14 @@
 
 @media (min-width: 1024px) {
 
-    /* --------------- site__content --------------- */
+    /* --------------- site --------------- */
+    .site:after {
+        content: '';
+        display: block;
+        clear: both;
+        width: 100%;
+        height: 267px;
+    }
     .site__content-layout {
         padding: 0;
     }
@@ -839,7 +837,7 @@
         max-width: 721px;
         margin-left: 229px;
     }
-    /* ---------------/site__content--------------- */
+    /* ---------------/site--------------- */
 
     /* --------------- slots --------------- */
     .slots__item {
