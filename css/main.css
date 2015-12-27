@@ -73,8 +73,12 @@
 }
 .site__title a{
     float: right;
-    margin-left: 15px;
+    margin-left: 26px;
     margin-top: -7px;
+    transition: opacity .3s ease;
+}
+.site__title a:hover{
+    opacity: 0.7;
 }
 .site__content {
     position: relative;
@@ -489,13 +493,13 @@
     position: relative;
     width: 100%;
     padding: 0 7px;
-    height: 40px;
+    height: 44px;
     border-bottom: 2px solid #292436;
     border-top: 2px solid #292436;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
 }
 .header-slider  .slider__layout{
-    padding: 10px;
+    padding: 11px;
     height: 40px;
     text-align: center;
 }
@@ -511,7 +515,7 @@
 .button_next,
 .button_prev{
     position: absolute;
-    top: 31px;
+    top: 33px;
     width:10px;
     height: 17px;
     background: url("../img/slider-left.png") no-repeat center;
@@ -532,21 +536,23 @@
     text-align: center;
 }
 .slots ul{
-    margin-bottom: 20px;
+    margin-bottom: 9px;
 }
 .slots__item{
     display: none;
     position: relative;
     vertical-align: top;
     margin: 0 3px 9px 3px;
-    width: 189px;
+    width: 199px;
     height: 158px;
     border: 2px solid #292436;
     text-align: center;
 }
 .slots ul li:nth-child(1),
 .slots ul li:nth-child(2),
-.slots ul li:nth-child(3){
+.slots ul li:nth-child(3),
+.slots ul li:nth-child(4),
+.slots ul li:nth-child(5){
     display: inline-block;
 }
 .slots__item a{
@@ -556,7 +562,7 @@
 .slots__pic{
     width: 100%;
     height: 116px;
-    margin-bottom: 7px;
+    margin-bottom: 10px;
 }
 .slots__pic img{
     width: 100%;
@@ -581,7 +587,7 @@
     transform: scaleY(1);
 }
 .slots__hover {
-    width: 185px;
+    width: 194px;
     height: 155px;
     -webkit-transform-origin: 0 100%;
     transform-origin: 0 100%;
@@ -629,7 +635,7 @@
     display: inline-block;
     vertical-align: middle;
     margin-right: 10px;
-    width: 32px;
+    width: 33px;
     height: 35px;
     background: #7d0223;
     transition: opacity .3s ease;
@@ -868,6 +874,9 @@
     font-size: 13px;
     margin-right: 5px;
 }
+.like__name_yes{
+    display: none;
+}
 .like__value{
     position: relative;
     height: 2px;
@@ -966,12 +975,10 @@
     margin-top: 39px;
     margin-bottom: 87px;
 }
-.wizard__item{
+.wizard__welcome{
     position: relative;
     display: inline-block;
     vertical-align: top;
-}
-.wizard__welcome{
     width: 220px;
     background:url("../img/wizard-bg.png") no-repeat center;
     background-size: cover;
@@ -986,8 +993,8 @@
     position: absolute;
     background: url("../img/wizard-top-right.png") no-repeat center;
     background-size: contain;
-    top: -14px;
-    right: -4px;
+    top: 0;
+    right: -5px;
 }
 .wizard__usa{
     font-weight: 700;
@@ -1066,6 +1073,9 @@
     margin: 0 20px;
 }
 .wizard__bonus{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
     width: 216px;
 }
 .wizard__code{
@@ -1099,9 +1109,15 @@
     text-align: center;
     background: url("../img/wizard-bg-btn.png") no-repeat center;
     background-size: contain;
+    transition: color .3s ease, background .3s ease;
+}
+.wizard__btn:hover{
+    color:#fff;
 }
 .wizard__pic{
     position: relative;
+    display: inline-block;
+    vertical-align: top;
     width: 216px;
     height: 239.5px;
 }
@@ -1128,12 +1144,15 @@
     background-size: contain;
     z-index: 3;
 }
-.wizard__welcome:after {
-    right: 14px;
-}
 /* --------------- /wizard --------------- */
 
 @media (min-width: 768px) {
+
+    /* --------------- /wizard --------------- */
+    .header-slider {
+        margin-bottom: 16px;
+    }
+    /* --------------- /wizard --------------- */
 
     /* --------------- breadcrumbs --------------- */
     .breadcrumbs {
@@ -1257,15 +1276,18 @@
     .site__content-layout {
         padding: 0 5px;
     }
-
     /* --------------- /site__content --------------- */
+
     /* --------------- slots --------------- */
+    .slots ul {
+        margin-bottom: 12px;
+    }
     .slots__item {
         display: inline-block;
-        width: 229px;
-        height: 185px;
+        width: 232px;
+        height: 186px;
+        margin: 0 4px 11px 4px;
     }
-
     .slots__title {
         font-size: 15px;
     }
@@ -1274,21 +1296,19 @@
         height: 139px;
         margin-bottom: 9px;
     }
-
     .slots__hover {
-        width: 225px;
+        width: 227px;
         height: 183px;
     }
-
     .slots__hover span {
         margin-top: 74px;
         font-size: 18px;
     }
-
     /* --------------- /slots --------------- */
+
     /* --------------- navigation --------------- */
     .navigation__item {
-        margin-right: 16px;
+        margin-right: 20px;
         font-size: 20px;
     }
 
@@ -1419,8 +1439,6 @@
     }
     .wizard__welcome {
         width: 231px;
-    }
-    .wizard__welcome {
         text-align: center;
         padding-bottom: 18px;
         margin-right: 22px;
@@ -1489,6 +1507,9 @@
         height: 168px;
         left: 137px;
         top: 53px;
+    }
+    .wizard__welcome:after {
+        right: -8px;
     }
     /* --------------- /wizard--------------- */
 }
@@ -1646,8 +1667,8 @@
     }
     .site__wrap-center {
         margin-bottom: 11px;
-        max-width: 721px;
-        margin-left: 229px;
+        max-width: 737px;
+        margin-left: 211px;
     }
     .mobile_none{
         display: block;
@@ -1656,6 +1677,7 @@
     .site__title{
         font-size: 24px;
         padding-bottom: 20px;
+        margin-bottom: 21px;
     }
     /* ---------------/site__content--------------- */
     /* ---------------/site--------------- */
@@ -1684,6 +1706,23 @@
         font-size: 16px;
     }
     /* --------------- /slots --------------- */
+
+    /* ---------------navigation --------------- */
+    .navigation {
+        margin-bottom: 45px;
+    }
+    /* --------------- /navigation --------------- */
+
+    /* ---------------header-slider--------------- */
+    .header-slider {
+        border: none;
+    }
+    .button_next, .button_prev {
+        top: 30px;
+        width: 15px;
+        height: 22px;
+    }
+    /* --------------- /header-slider --------------- */
 
     /* --------------- slider --------------- */
     .slider{
@@ -1744,4 +1783,99 @@
     }
     /* --------------- /breadcrumbs--------------- */
 
+    /* --------------- slots--------------- */
+    .slots ul {
+        margin-bottom: 24px;
+    }
+    /* --------------- /slots--------------- */
+
+    /* --------------- like--------------- */
+    .like__title span {
+        letter-spacing: 0.7px;
+    }
+    .like__finger-down, .like__finger-up {
+        width: 45px;
+    }
+     .like__finger-up{
+         margin-left: 13px;
+    }
+    .like__finger-down{
+        margin-top: 25px;
+    }
+
+    .like__name_no{
+        display: none;
+    }
+    .like__name_yes{
+        display: inline-block;
+    }
+    .like__name {
+        width: 55px;
+    }
+    .like__value {
+        width: 318px;
+    }
+    .like__finger-up:before, .like__finger-down:before {
+        width: 46px;
+        height: 33px;
+    }
+    /* --------------- /like--------------- */
+
+    /* --------------- tags--------------- */
+    .tags {
+        margin-bottom: 43px;
+    }
+    /* --------------- /tags--------------- */
+
+    /* --------------- wizard--------------- */
+    .wizard__wrap {
+        margin-bottom: 62px;
+    }
+    .wizard__welcome {
+        width: 248px;
+        margin-top: -18px;
+        margin-right: 36px;
+    }
+    .wizard__bonus {
+        width: 203px;
+        padding-top: 26px;
+    }
+    .wizard__pic {
+        width: 200px;
+    }
+    .wizard__mars {
+        width: 300px;
+        top: -72px;
+        height: 416px;
+        margin-left: -110px;
+    }
+    .wizard__flag {
+        width: 168px;
+        height: 220px;
+        left: 200px;
+        top: 45px;
+    }
+    .wizard__welcome:after {
+        right: -11px;
+        width: 16.5px;
+        height: 17px;
+        top: 0px;
+    }
+    /* --------------- /wizard--------------- */
+
+    /* --------------- information--------------- */
+    .information__name {
+        width: 156px;
+        letter-spacing: -0.5px;
+    }
+    .information-item {
+        margin-bottom: 10px;
+    }
+    .information ul:first-child {
+        margin-right: 88px;
+    }
+    .information {
+        margin-bottom: 42px;
+    }
+    /* --------------- /information--------------- */
 }
