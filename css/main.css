@@ -54,16 +54,17 @@
     min-width:320px;
     overflow: hidden;
     position: relative;
+    color: #6e687d;
     z-index: 1;
     background: #0b060e url("../img/body_bg.png") no-repeat center;
     background-size: cover;
 }
 .site__title{
-    margin: 30px 5px 17px;
-    font-size: 16px;
+    margin: 0px 5px 13px;
+    font-size: 20px;
     color: #cac6d5;
     text-transform: uppercase;
-    line-height: 22px;
+    line-height: 23px;
     border-bottom: 2px solid #292436;
     padding-bottom: 11px;
 }
@@ -268,7 +269,6 @@
     height: 45px;
     font-weight: 600;
 }
-
 .menu__btn {
     position: absolute;
     top: 0;
@@ -677,7 +677,8 @@
 
 /* --------------- information --------------- */
 .information{
-    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 22px;
 }
 .information ul{
     display: inline-block;
@@ -685,30 +686,33 @@
 }
 .information-item{
     font-weight: 700;
-    display: table-row;
+    display: block;
+    margin-bottom: 6px;
 }
 .information__pic{
-    display: table-cell;
-    vertical-align:middle;
-    width: 30px;
-    background-position:center;
+    display: inline-block;
+    vertical-align: middle;
+    width: 28px;
+    height: 28px;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    padding: 17px 0;
+    margin-right: 6px;
 }
 .information__name{
-    display: table-cell;
-    vertical-align:middle;
-    color:#6e687d;
-    font-size: 16px;
-    padding-left: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #6e687d;
+    font-size: 14px;
+    padding-left: 12px;
+    width: 133px;
 }
 .information__answer{
-    display: table-cell;
+    display: inline-block;
     vertical-align:middle;
     color: #b90030;
     font-size: 14px;
-    padding-left: 20px;
+    padding-left: 12px;
 }
 /* --------------- /information --------------- */
 
@@ -716,7 +720,7 @@
 .breadcrumbs {
     font-family:'Roboto', sans-serif;
     font-size: 13px;
-    margin-bottom: 18px;
+    margin-bottom: 15px;
     position: relative;
     margin-top: 7px;
 }
@@ -767,30 +771,39 @@
 
 /* --------------- warming --------------- */
 .warming{
-    font-family: 'Roboto Bold', 'sans-serif';
-    padding: 15px;
+    padding: 4px 10px;
     font-size: 13px;
     color: #bd0031;
     border-top: 2px solid #bd0031;
-    border-bottom: 2px solid #bd0031;
+    border-bottom: 1px solid #bd0031;
     background: rgba(189, 0, 49, 0.42);
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    line-height: 15px;
 }
 .game-pic{
     width: 100%;
     height: auto;
-
 }
 /* --------------- /warming --------------- */
-.like{
 
+/* --------------- like --------------- */
+.like{
+    border-bottom: 2px solid #292436;
+    padding-bottom: 28px;
+    margin-bottom: 25px;
 }
 .like__scale{
-    margin-bottom: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.like__item{
 }
 .like__title{
-    margin-bottom: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 21px;
 }
 .like__title span{
     display: inline-block;
@@ -798,7 +811,8 @@
     color: #6e687d;
     font-size: 13px;
     font-weight: 700;
-    padding-top: 12px;
+    padding-top: 9px;
+    letter-spacing: 0.3px;
 }
 .like__finger-up{
     display: inline-block;
@@ -808,7 +822,7 @@
     height:27px;
     background: url("../img/finger-up.png")no-repeat center;
     background-size: contain;
-    margin-left: 20px;
+    margin-left: 28px;
 }
 .like__finger-down{
     display: inline-block;
@@ -818,8 +832,8 @@
     height:27px;
     background: url("../img/finger-down.png") no-repeat center;
     background-size: contain;
-    margin-left: 20px;
-    margin-top: 19px;
+    margin-left: 12px;
+    margin-top: 22px;
 }
 .like__finger-up:before{
     display: none;
@@ -845,21 +859,30 @@
 .like__finger-down:hover:before{
     display: block;
 }
+.like__name {
+    color: #bd0031;
+    display: inline-block;
+    vertical-align: middle;
+    width: 52px;
+    text-align: right;
+    font-size: 13px;
+    margin-right: 5px;
+}
 .like__value{
     position: relative;
-    height: 3px;
-    width: 290px;
+    height: 2px;
+    width: 240px;
     display: inline-block;
     vertical-align: middle;
     background: #292436;
 }
 .like__value:after,
 .like__value:before{
-    top: -4px;
     content: "";
     position: absolute;
-    width: 10px;
-    height:10px;
+    top: -3px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background: #292436;
 }
@@ -879,9 +902,9 @@
 .like__value>div:after{
     content: "";
     position: absolute;
-    top: -4px;
-    width: 10px;
-    height: 10px;
+    top: -3px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background: #bd0031;
 }
@@ -895,8 +918,6 @@
 .like__value>div:after{
     right: 0;
 }
-
-
 .like__value{
 
 }
@@ -906,7 +927,6 @@
 .red_number{
     color:#bd0031;
 }
-
 .black{
     background:#696377;
 }
@@ -920,84 +940,294 @@
     color:#696377;
     top: 11px;
 }
-@media (min-width: 768px){
+.black_name{
+    color:#696377;
+}
+/* --------------- /like --------------- */
+
+/* --------------- tags --------------- */
+.tags{
+    font-size: 13px;
+    font-weight: 700;
+    padding-left: 6px;
+    margin-bottom:45px;
+}
+.tags__item{
+    color:#bd0031;
+}
+/* --------------- /tags --------------- */
+
+/* --------------- wizard --------------- */
+.wizard__wrap{
+    text-align: center;
+    background: #1b1724;
+    border-top: 1px solid #292436;
+    border-bottom: 1px solid #292436;
+    margin-top: 39px;
+    margin-bottom: 87px;
+}
+.wizard__item{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+.wizard__welcome{
+    width: 220px;
+    background:url("../img/wizard-bg.png") no-repeat center;
+    background-size: cover;
+    margin-bottom: 27px;
+    margin-top: -14px;
+    padding-bottom: 21px;
+}
+.wizard__welcome:after{
+    content: "";
+    width: 10.5px;
+    height: 13px;
+    position: absolute;
+    background: url("../img/wizard-top-right.png") no-repeat center;
+    background-size: contain;
+    top: -14px;
+    right: -4px;
+}
+.wizard__usa{
+    font-weight: 700;
+    line-height: 20px;
+    font-size: 19px;
+    position: relative;
+    padding: 10px 0;
+    margin-bottom: 11px;
+}
+.wizard__usa:before,
+.wizard__usa:after{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top:50%;
+    margin-top: -8.5px;
+    background: url("../img/wizard-star.png") no-repeat center;
+    background-size: contain;
+}
+.wizard__usa:before{
+    left: 14px;
+}
+.wizard__usa:after{
+   right: 20px;
+}
+.wizard__usa span{
+    text-transform: uppercase;
+    font-size: 19px;
+    display: block;
+    line-height: 22px;
+}
+.wizard__gradient{
+
+}
+.wizard__spins {
+    margin-bottom: 11px;
+}
+.wizard__spins span{
+    color:#f5f2ff;
+    display: block;
+    font-size: 34px;
+    margin-bottom: -3px;
+}
+.wizard__spins .spins-number{
+    font-size: 50px;
+    margin-bottom: -3px;
+}
+.wizard__spins .spins{
+    font-size: 28px;
+
+}
+.wizard__likes{
+    font-size: 17px;
+    font-weight: 700;
+    padding: 11px 24px;
+    text-align: left;
+}
+.like-number{
+    color:#fefeff;
+    display: inline-block;
+    vertical-align: bottom;
+}
+.likes{
+    color:#cac6d5;
+    display: inline-block;
+    vertical-align: bottom;
+}
+.wizard__up{
+    display: inline-block;
+    vertical-align: top;
+    width: 30px;
+    height: 31px;
+    background: url("../img/wizard-finger-up.png") no-repeat center;
+    background-size: contain;
+    margin: 0 20px;
+}
+.wizard__bonus{
+    width: 216px;
+}
+.wizard__code{
+    width: 100%;
+    font-family: "Roboto", "sans-serif";
+    padding: 8px;
+    border: 3px solid #b90030;
+    color: #b90030;
+    text-align: center;
+    font-size: 20.5px;
+    text-transform: uppercase;
+    margin-bottom: 27px;
+    font-weight: 700;
+}
+.wizard__logo{
+    width: 158px;
+    height: 51.5px;
+    margin-bottom: 26px;
+}
+.wizard__logo img{
+    margin-left: 27px;
+    width: 100%;
+    height: 100%;
+}
+.wizard__btn{
+    display: block;
+    width: 100%;
+    padding: 21px 0 26px 0;
+    color:#cac6d5;
+    font-weight: 700;
+    text-align: center;
+    background: url("../img/wizard-bg-btn.png") no-repeat center;
+    background-size: contain;
+}
+.wizard__pic{
+    position: relative;
+    width: 216px;
+    height: 239.5px;
+}
+.wizard__mars{
+    position: absolute;
+    width: 170px;
+    top: 0px;
+    height: 304px;
+    left: 50%;
+    margin-left: -85px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 2;
+}
+.wizard__flag{
+    position: absolute;
+    width: 121px;
+    height: 168px;
+    left: 124px;
+    top: 27px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 3;
+}
+.wizard__welcome:after {
+    right: 14px;
+}
+/* --------------- /wizard --------------- */
+
+@media (min-width: 768px) {
 
     /* --------------- breadcrumbs --------------- */
     .breadcrumbs {
         font-size: 14px;
+        margin-bottom: 20px;
     }
-    .breadcrumbs a{
-        font-size: 14px;
-    }
-    /* --------------- breadcrumbs --------------- */
 
+    .breadcrumbs a {
+        font-size: 14px;
+        margin-right: 41px;
+    }
+
+    /* --------------- breadcrumbs --------------- */
     /* --------------- site --------------- */
     .site__header {
         height: 40px;
     }
-    .site:after{
+
+    .site:after {
         height: 280px;
     }
-    .site__title{
-        padding-bottom: 20px;
-    }
-    /* --------------- /site --------------- */
 
+    .site__title {
+        padding-bottom: 15px;
+        font-size: 24px;
+        margin-bottom: 23px;
+        line-height: 30px;
+        padding-right: 190px;
+    }
+
+    /* --------------- /site --------------- */
     /* --------------- logo --------------- */
     .logo {
         height: 39px;
         left: 74px;
     }
+
     .logo:before {
         width: 102px;
         height: 40px;
         left: 159px;
     }
-    /* --------------- /logo --------------- */
 
+    /* --------------- /logo --------------- */
     /* --------------- menu --------------- */
-    .menu{
+    .menu {
         height: 48px;
     }
-    .menu__btn{
+
+    .menu__btn {
         height: 40px;
         width: 50px;
         left: 11px;
         padding: 0 14px 1px;
     }
+
     .menu__btn > span,
     .menu__btn > span:before,
-    .menu__btn > span:after{
+    .menu__btn > span:after {
         height: 3px;
     }
-    .menu__wrap{
+
+    .menu__wrap {
         top: 40px;
         width: 196px;
         padding-top: 15px;
     }
-    .menu__wrap > a{
+
+    .menu__wrap > a {
         font-size: 14px;
         margin: 23px 23px 29px;
     }
-    .menu__aside dt{
+
+    .menu__aside dt {
         margin-left: 32px;
         font-size: 14px;
         color: #fff;
     }
-    /* --------------- /menu --------------- */
 
+    /* --------------- /menu --------------- */
     /* --------------- search --------------- */
-    .search{
+    .search {
         width: 180px;
         height: auto;
         margin-top: 5px;
         margin-right: 15px;
     }
+
     .search:before,
-    .search__btn{
+    .search__btn {
         display: none;
     }
-    .search__frame{
+
+    .search__frame {
         position: relative;
         top: 0;
         right: 0;
@@ -1006,11 +1236,13 @@
         opacity: 1;
         visibility: visible;
     }
-    .search__frame input{
+
+    .search__frame input {
         height: 31px;
         padding-left: 10px;
         font-size: 13px;
     }
+
     .search__frame button {
         top: 0;
         right: 0;
@@ -1019,81 +1251,247 @@
         background-image: url("../img/icons-lupa-white.png");
         background-position: 1px 7px;
     }
-    /* --------------- /search --------------- */
 
+    /* --------------- /search --------------- */
     /* --------------- site__content --------------- */
     .site__content-layout {
         padding: 0 5px;
     }
-    /* --------------- /site__content --------------- */
 
+    /* --------------- /site__content --------------- */
     /* --------------- slots --------------- */
     .slots__item {
         display: inline-block;
         width: 229px;
         height: 185px;
     }
+
     .slots__title {
         font-size: 15px;
     }
-    .slots__pic{
+
+    .slots__pic {
         height: 139px;
         margin-bottom: 9px;
     }
+
     .slots__hover {
         width: 225px;
         height: 183px;
     }
+
     .slots__hover span {
         margin-top: 74px;
         font-size: 18px;
     }
-    /* --------------- /slots --------------- */
 
+    /* --------------- /slots --------------- */
     /* --------------- navigation --------------- */
     .navigation__item {
         margin-right: 16px;
         font-size: 20px;
     }
+
     .navigation__next,
     .navigation__prev {
         margin-right: 60px;
         width: 40px;
         height: 40px;
     }
-    .navigation__next{
+
+    .navigation__next {
         margin-right: 0;
         margin-left: 44px;
     }
+
     .navigation__next:before, .navigation__prev:before {
         width: 13px;
         height: 22px;
         top: 9px;
         left: 13px;
     }
-    .navigation .active{
+
+    .navigation .active {
         font-size: 28px;
     }
+
     /* --------------- /navigation --------------- */
-
     /* --------------- information --------------- */
-    .information{
-
+    .information {
+        padding: 0 12px;
+        margin-bottom: 36px;
     }
-    .information ul{
-        width:49%;
+    .information ul:first-child{
+        margin-right: 92px;
     }
-    /* --------------- information --------------- */
-
-    /* --------------- warming --------------- */
-    .warming{
+    .information-item {
+        margin-bottom: 11px;
+    }
+    .information__name {
+        font-size: 17px;
+        width: 161px;
+    }
+    .information__answer {
         font-size: 15px;
-        padding: 20px 120px;
-        line-height: 20px;
     }
-    /* --------------- /warming --------------- */
-}
+    .information__pic {
+        width: 35px;
+    }
+    /* --------------- information --------------- */
+    /* --------------- warming --------------- */
+    .warming {
+        font-size: 15px;
+        padding: 13px 120px;
+        line-height: 19px;
+        margin-bottom: 27px;
+    }
 
+    /* --------------- /warming --------------- */
+    .game-pic {
+        margin-bottom: 18px;
+    }
+
+    /* --------------- like --------------- */
+    .like__finger-down,
+    .like__finger-up {
+        margin-left: 7px;
+        width: 51px;
+        height: 34px;
+    }
+
+    .like__finger-down {
+        margin-left: 0px;
+    }
+
+    .like__title span {
+        font-size: 15px;
+    }
+
+    .like__finger-up:before,
+    .like__finger-down:before {
+        width: 51px;
+        height: 34px;
+    }
+
+    .like__title {
+        padding-top: 9px;
+        margin-right: 18px;
+    }
+
+    .like__name {
+        margin-right: 11px;
+        margin-bottom: 7px;
+    }
+
+    .like__value {
+        height: 4px;
+        width: 313px;
+    }
+
+    .like__number {
+        font-size: 18px;
+        right: -19px;
+        top: -29px;
+    }
+
+    .like {
+        padding-bottom: 11px;
+        margin-bottom: 36px;
+    }
+    .black_number {
+        top: 13px;
+    }
+    /* --------------- /like--------------- */
+    /* --------------- tags--------------- */
+    .tags {
+        font-size: 16px;
+        margin-bottom: 47px;
+    }
+
+    /* --------------- /tags--------------- */
+
+    /* --------------- wizard--------------- */
+    .wizard__wrap {
+        text-align: left;
+        margin-top: 35px;
+        padding-left: 32px;
+        margin-bottom: 50px;
+    }
+    .wizard__welcome {
+        width: 231px;
+    }
+    .wizard__welcome {
+        text-align: center;
+        padding-bottom: 18px;
+        margin-right: 22px;
+        margin-bottom: 16px;
+    }
+    .wizard__usa span {
+        font-size: 23px;
+        line-height: 27px;
+    }
+    .wizard__usa {
+        margin-bottom: 16px;
+    }
+    .wizard__spins .spins {
+        font-size: 34px;
+    }
+    .wizard__spins span {
+        font-size: 41px;
+        margin-bottom: -3px;
+    }
+    .wizard__spins .spins-number {
+        font-size: 59px;
+        margin-bottom: -6px;
+    }
+    .wizard__spins {
+        margin-bottom: 15px;
+    }
+    .wizard__likes {
+        font-size: 20px;
+        padding: 11px 0 22px 23px;
+    }
+    .wizard__up {
+        width: 38px;
+        height: 34px;
+        margin: 0 22px;
+    }
+    .wizard__bonus {
+        width: 205px;
+        padding-top: 31px;
+    }
+    .wizard__code {
+        font-size: 24.5px;
+        margin-bottom: 34px;
+        padding: 9px;
+    }
+    .wizard__logo {
+        width: 182px;
+        height: 56.5px;
+        margin-bottom: 35px;
+    }
+    .wizard__logo img {
+        margin-left: 11px;
+    }
+    .wizard__btn {
+        padding: 23px 7px 31px 0;
+        font-size: 20px;
+        background-size: cover;
+    }
+    .wizard__mars {
+        width: 190px;
+        top: -25px;
+        height: 347px;
+        margin-left: -110px;
+    }
+    .wizard__flag {
+        width: 119px;
+        height: 168px;
+        left: 137px;
+        top: 53px;
+    }
+    /* --------------- /wizard--------------- */
+}
 @media (min-width: 950px) {
 
     /* --------------- site --------------- */
@@ -1253,6 +1651,7 @@
     }
     .mobile_none{
         display: block;
+        padding-right: 0;
     }
     .site__title{
         font-size: 24px;
@@ -1338,5 +1737,11 @@
        display: none;
     }
     /* --------------- /warming --------------- */
+
+    /* --------------- breadcrumbs --------------- */
+    .breadcrumbs {
+        margin-bottom: 37px;
+    }
+    /* --------------- /breadcrumbs--------------- */
 
 }
