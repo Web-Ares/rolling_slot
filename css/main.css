@@ -1075,6 +1075,7 @@
     font-size: 19px;
     display: block;
     line-height: 22px;
+    text-align: center;
 }
 .wizard__gradient{
 
@@ -1884,6 +1885,7 @@
         height: 42px;
         background: url("../img/wrap-slider-left.png") no-repeat center;
         background-size: contain;
+        cursor: pointer;
     }
     .slider_prev{
         left: 0;
