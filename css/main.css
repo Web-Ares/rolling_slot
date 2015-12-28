@@ -146,7 +146,7 @@
 .contact-wrap{
     background: #14111b;
     border: 1px solid #373146;
-    margin-bottom: 100px;
+    margin: 0 5px 100px 5px;
 }
 .contact-form{
     width: 272px;
@@ -154,7 +154,7 @@
     padding: 27px 34px 0;
     text-align: center;
     background-color: #1a1622;
-    margin: 0 auto;
+    margin: -20px auto 0;
     padding-right: 29px;
 }
 .contact-form>input, .contact-form>textarea{
