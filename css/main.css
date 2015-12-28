@@ -85,7 +85,7 @@
     z-index: 2;
 }
 .site__content-layout {
-    max-width: 945px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 6.5px;
 }
@@ -1560,14 +1560,15 @@
         border-bottom-width: 3px;
     }
     .site__aside{
-        float: left;
+        position: absolute;
+        top: 0;
+        left: 0;
         display: block;
-        width: 208px;
+        width: 235px;
     }
     .site__content-layout{
         margin-bottom: 17px;
         background-color: #14111b;
-        overflow: hidden;
     }
     .site__footer{
         position: absolute;
@@ -1585,6 +1586,8 @@
         left: -37px;
         margin: 0;
         padding: 0;
+        width: 274px;
+        height: 151px;
     }
     .logo:before{
         top: 0;
@@ -1706,12 +1709,13 @@
         height: 267px;
     }
     .site__content-layout {
+        position: relative;
         padding: 0;
     }
     .site__wrap-center {
+        margin-left: 235px;
         margin-bottom: 11px;
         max-width: 737px;
-        margin-left: 211px;
     }
     .mobile_none{
         display: block;

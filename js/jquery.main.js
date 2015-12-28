@@ -21,6 +21,20 @@ $(function(){
         subMenu($(this));
     });
 
+    $(window).on({
+        'resize': function () {
+            contentHeight();
+        },
+        'load': function() {
+            contentHeight();
+        }
+    })
+
+    function contentHeight() {
+        var elemHeight = $('.site__aside').outerHeight();
+        $('.site__content-layout').css('min-height', elemHeight);
+    }
+
 } );
 
 var Slider = function (obj) {
