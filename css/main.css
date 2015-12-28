@@ -1773,17 +1773,24 @@
         height: 40px;
         padding-left: 15px;
         padding-right: 40px;
+        font-family: "Roboto", "sans-serif";
         font-size: 18px;
+        font-weight: 400;
         color: #fff;
     }
     .search__frame input::-webkit-input-placeholder {
-        color: #fff;
+        color: #804a5c;
+        -webkit-transition: color 300ms ease-in-out;
     }
     .search__frame input:-moz-placeholder {
-        color: #fff;
+        color: #804a5c;
+        -webkit-transition: color 300ms ease-in-out;
+        transition: color 300ms ease-in-out;
     }
     .search__frame input .placeholder {
-        color: #fff;
+        color: #804a5c;
+        -webkit-transition: color 300ms ease-in-out;
+        transition: color 300ms ease-in-out;
     }
     .search__frame button {
         top: 3px;
