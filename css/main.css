@@ -1245,7 +1245,7 @@
     .site__title {
         padding-bottom: 15px;
         font-size: 18px;
-        margin-bottom: 0;
+        margin-bottom: 14px;
         line-height: 28px;
         padding-right: 190px;
         letter-spacing: 0;
@@ -1578,6 +1578,11 @@
     }
     .wizard__welcome:after {
         right: -8px;
+    }
+    .wizard__btn:before {
+        width: 205px;
+        height: 73px;
+        background-size: cover;
     }
     /* --------------- /wizard--------------- */
 }
@@ -1972,6 +1977,9 @@
         width: 16.5px;
         height: 17px;
         top: 0px;
+    }
+    .wizard__btn:before {
+        width: 203px;
     }
     /* --------------- /wizard--------------- */
 
