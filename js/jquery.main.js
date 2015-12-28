@@ -1,9 +1,11 @@
 $(function(){
 
-    $(".wizard__gradient").pxgradient({
+    $('.wizard__welcome').each(function () {
+        $('.wizard__gradient').pxgradient({
         step: 1,
         colors: ["#3883ff","#fff","#ff0000"],
         dir: "y"
+    });
     });
 
     $('.swiper-container').each(function () {
