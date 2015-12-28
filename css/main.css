@@ -60,13 +60,13 @@
     background-size: cover;
 }
 .site__title{
-    margin: 0px 5px 13px;
-    font-size: 20px;
+    margin: 0 5px;
+    font-size: 15px;
     color: #cac6d5;
     text-transform: uppercase;
-    line-height: 23px;
-    border-bottom: 2px solid #292436;
+    line-height: 22px;
     padding-bottom: 11px;
+    letter-spacing: .5px;
 }
 .mobile_none{
     display: none;
@@ -93,23 +93,50 @@
     margin-bottom: 11px;
     max-width: 729px;
 }
-.site__heade {
+.site__header {
     position: relative;
     height: 35px;
+    margin-bottom: 27px;
     background-color: #1c1622;
     z-index: 4;
 }
 .site__header-layout{
     position: relative;
-    max-width: 960px;
+    max-width: 1000px;
     height: inherit;
     margin: 0 auto;
+}
+.site__aside{
+    display: none;
 }
 .site__footer {
     z-index: 2;
     background-color: #1f1c26;
 }
 .site__footer-layout {
+    padding-top: 22px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.site__footer-layout a{
+    display: block;
+    color: #cac6d5;
+    text-transform: uppercase;
+    transition: color .3s ease;
+    -webkit-transition: color .3s ease;
+}
+.site__footer-layout a:hover,
+.site__footer-layout .active{
+    color: #b10000;
+}
+.site__footer-layout .active{
+    cursor: default;
+}
+.site__footer-layout li:first-child{
+    margin-bottom: 13px;
 }
 /* --------------- /site --------------- */
 
@@ -152,6 +179,7 @@
     bottom: -122px;
 }
 /* --------------- /contact-form --------------- */
+
 /* --------------- btn --------------- */
 .btn{
     background: url("../img/submit-btn.png");
@@ -177,7 +205,6 @@
 /* --------------- /btn --------------- */
 
 /* --------------- feedback-wrap --------------- */
-
 .feedback-wrap{
     padding-top: 24px;
 }
@@ -247,7 +274,7 @@
 .logo {
     position: absolute;
     top: 0;
-    left: 74px;
+    left: 51px;
     height: 33px;
 }
 .logo:before {
@@ -337,7 +364,7 @@
     top: 36px;
     left: 0;
     width: 160px;
-    padding-top: 14px;
+    padding: 14px 0 30px;
     background-color: #1c1622;
     opacity: 0;
     visibility: hidden;
@@ -365,9 +392,13 @@
     transition: color .3s ease;
     -webkit-transition: color .3s ease;
 }
+.menu a.active,
 .menu__wrap a:hover,
 .menu__aside a:hover{
     color: #bd0031;
+}
+.menu a.active{
+    cursor: default;
 }
 .menu__wrap > a{
     text-transform: uppercase;
@@ -504,13 +535,17 @@
     text-align: center;
 }
 .header-slider .slider__item{
-    font-family:'Roboto', sans-serif;
-    color: #bd0031;
+    color: #cac6d5;
     font-size: 13px;
+    font-weight: 800;
+    transition: color .3s ease;
+    -webkit-transition: color .3s ease;
+}
+.header-slider .slider__item:hover{
+    color: #9b231c;
 }
 .item_active{
-    font-family:'Roboto Black', sans-serif;
-    font-weight: 700;
+    color: #bd0031;
 }
 .button_next,
 .button_prev{
@@ -1166,73 +1201,73 @@
     }
 
     /* --------------- breadcrumbs --------------- */
+
     /* --------------- site --------------- */
     .site__header {
         height: 40px;
+        margin-bottom: 48px;
     }
-
-    .site:after {
-        height: 280px;
+    .site__content-layout {
+        padding: 0 20px;
     }
-
     .site__title {
         padding-bottom: 15px;
-        font-size: 24px;
-        margin-bottom: 23px;
-        line-height: 30px;
+        font-size: 18px;
+        margin-bottom: 0;
+        line-height: 28px;
         padding-right: 190px;
+        letter-spacing: 0;
     }
-
     /* --------------- /site --------------- */
+
     /* --------------- logo --------------- */
     .logo {
         height: 39px;
         left: 74px;
     }
-
     .logo:before {
         width: 102px;
         height: 40px;
         left: 159px;
     }
-
     /* --------------- /logo --------------- */
+
     /* --------------- menu --------------- */
     .menu {
         height: 48px;
     }
-
     .menu__btn {
         height: 40px;
         width: 50px;
         left: 11px;
         padding: 0 14px 1px;
     }
-
     .menu__btn > span,
     .menu__btn > span:before,
     .menu__btn > span:after {
         height: 3px;
     }
-
     .menu__wrap {
         top: 40px;
         width: 196px;
         padding-top: 15px;
     }
-
     .menu__wrap > a {
         font-size: 14px;
         margin: 23px 23px 29px;
     }
-
     .menu__aside dt {
         margin-left: 32px;
         font-size: 14px;
         color: #fff;
     }
-
+    .menu__aside li a,
+    .menu__wrap li a{
+        margin: 21px 25px 22px;
+        font-size: 12px;
+    }
     /* --------------- /menu --------------- */
+
     /* --------------- search --------------- */
     .search {
         width: 180px;
@@ -1240,12 +1275,10 @@
         margin-top: 5px;
         margin-right: 15px;
     }
-
     .search:before,
     .search__btn {
         display: none;
     }
-
     .search__frame {
         position: relative;
         top: 0;
@@ -1255,13 +1288,11 @@
         opacity: 1;
         visibility: visible;
     }
-
     .search__frame input {
         height: 31px;
         padding-left: 10px;
         font-size: 13px;
     }
-
     .search__frame button {
         top: 0;
         right: 0;
@@ -1270,13 +1301,16 @@
         background-image: url("../img/icons-lupa-white.png");
         background-position: 1px 7px;
     }
-
     /* --------------- /search --------------- */
-    /* --------------- site__content --------------- */
-    .site__content-layout {
-        padding: 0 5px;
+
+    /* --------------- header-slider --------------- */
+    .header-slider .slider__item{
+        font-size: 15px;
     }
-    /* --------------- /site__content --------------- */
+    .header-slider .slider__layout{
+        padding: 14px 11px;
+    }
+    /* --------------- /header-slider --------------- */
 
     /* --------------- slots --------------- */
     .slots ul {
@@ -1336,6 +1370,7 @@
     }
 
     /* --------------- /navigation --------------- */
+
     /* --------------- information --------------- */
     .information {
         padding: 0 12px;
@@ -1358,6 +1393,7 @@
         width: 35px;
     }
     /* --------------- information --------------- */
+
     /* --------------- warming --------------- */
     .warming {
         font-size: 15px;
@@ -1517,37 +1553,45 @@
 
     /* --------------- site --------------- */
     .site:after{
-        height: 186px;
+        height: 270px;
     }
     .site__header{
-        height: 61px;
+        height: 52px;
         border-bottom-width: 3px;
     }
     .site__aside{
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
+        float: left;
         display: block;
         width: 208px;
-        padding-top: 158px;
-        box-shadow: 0 0 7px #ccc;
-        background-color: #fff;
+    }
+    .site__content-layout{
+        margin-bottom: 17px;
+        background-color: #14111b;
+        overflow: hidden;
+    }
+    .site__footer{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 270px;
     }
     /* --------------- /site --------------- */
 
     /* --------------- logo --------------- */
     .logo{
         position: absolute;
-        top: 17px;
-        left: 0;
+        top: 9px;
+        left: -37px;
         margin: 0;
         padding: 0;
     }
     .logo:before{
-        width: 208px;
-        height: 182px;
-        background: url("../img/logo-big.png") no-repeat 6px 4px/194px 178px;
+        top: 0;
+        left: 0;
+        width: 274px;
+        height: 151px;
+        background: url("../img/logo-roling-slot.png") no-repeat 0 0;
     }
     .logo img{
         display: none;
@@ -1577,16 +1621,15 @@
     .menu__wrap > a{
         display: inline-block;
         height: auto;
-        padding-top: 19px;
-        padding-left: 0;
-        font-size: 18px;
-        margin-right: 27px;
-        color: #0098ff;
+        margin: 12px 41px 0 0;
+        padding: 0;
+        font-size: 16px;
+        color: #cac6d5;
         transition: color .3s ease;
         -webkit-transition: color .3s ease;
     }
     .menu__wrap a:hover{
-        color: #f8f3f1;
+        color: #bd0031;
     }
     .menu__wrap > a:after{
         display: none;
@@ -1679,8 +1722,41 @@
         padding-bottom: 20px;
         margin-bottom: 21px;
     }
-    /* ---------------/site__content--------------- */
     /* ---------------/site--------------- */
+
+    /* --------------- search --------------- */
+    .search{
+        width: 250px;
+        margin-top: 6px;
+        margin-right: 10px;
+    }
+    .search__frame{
+        padding: 0;
+    }
+    .search__frame input{
+        height: 40px;
+        padding-left: 15px;
+        padding-right: 40px;
+        font-size: 18px;
+        color: #fff;
+    }
+    .search__frame input::-webkit-input-placeholder {
+        color: #fff;
+    }
+    .search__frame input:-moz-placeholder {
+        color: #fff;
+    }
+    .search__frame input .placeholder {
+        color: #fff;
+    }
+    .search__frame button {
+        top: 3px;
+        right: 7px;
+        width: 29px;
+        height: 32px;
+        background-size: 22px 23px;
+    }
+    /* --------------- /search --------------- */
 
     /* --------------- slots --------------- */
     .slots__item {
@@ -1802,7 +1878,6 @@
     .like__finger-down{
         margin-top: 25px;
     }
-
     .like__name_no{
         display: none;
     }
