@@ -1,5 +1,11 @@
 $(function(){
 
+    $(".wizard__gradient").pxgradient({
+        step: 1,
+        colors: ["#3883ff","#fff","#ff0000"],
+        dir: "y"
+    });
+
     $('.swiper-container').each(function () {
         Slider($(this));
     });

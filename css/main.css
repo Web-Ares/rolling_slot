@@ -67,6 +67,8 @@
     line-height: 22px;
     padding-bottom: 11px;
     letter-spacing: .5px;
+    border-bottom: 2px solid #292436;
+    margin-bottom: 10px;
 }
 .mobile_none{
     display: none;
@@ -718,7 +720,7 @@
 
 /* --------------- information --------------- */
 .information{
-    padding: 0 20px;
+    padding: 0 0 0 20px;
     margin-bottom: 22px;
 }
 .information ul{
@@ -746,7 +748,7 @@
     color: #6e687d;
     font-size: 14px;
     padding-left: 12px;
-    width: 133px;
+    width: 140px;
 }
 .information__answer{
     display: inline-block;
@@ -1003,12 +1005,24 @@
 
 /* --------------- wizard --------------- */
 .wizard__wrap{
+    position: relative;
     text-align: center;
     background: #1b1724;
     border-top: 1px solid #292436;
     border-bottom: 1px solid #292436;
     margin-top: 39px;
     margin-bottom: 87px;
+}
+.wizard__wrap:before{
+    content: "";
+    position: absolute;
+    bottom: -66px;
+    left: -320px;
+    width: 661px;
+    height: 542px;
+    background: url("../img/wizard-background.png") no-repeat center;
+    background-size: contain;
+    z-index: 0;
 }
 .wizard__welcome{
     position: relative;
@@ -1136,6 +1150,7 @@
     height: 100%;
 }
 .wizard__btn{
+    position: relative;
     display: block;
     width: 100%;
     padding: 21px 0 26px 0;
@@ -1144,10 +1159,27 @@
     text-align: center;
     background: url("../img/wizard-bg-btn.png") no-repeat center;
     background-size: contain;
-    transition: color .3s ease, background .3s ease;
+    transition: color .3s ease;
 }
 .wizard__btn:hover{
     color:#fff;
+    z-index: 3;
+}
+.wizard__btn:before{
+    opacity: 0;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 215px;
+    height: 62px;
+    background: url("../img/wizard-bg-btn-hover.png") no-repeat center;
+    background-size: contain;
+    transition: opacity .3s ease;
+    z-index: -1;
+}
+.wizard__btn:hover:before{
+    opacity: 1;
 }
 .wizard__pic{
     position: relative;
@@ -1886,6 +1918,7 @@
     }
     .like__name {
         width: 55px;
+        vertical-align: baseline;
     }
     .like__value {
         width: 318px;
