@@ -156,6 +156,13 @@
     background-color: #1a1622;
     margin: -20px auto 0;
     padding-right: 29px;
+    float: right;
+    margin-right: 13px;
+}
+.contact-wrap:after{
+    content: '';
+    display: block;
+    clear: both;
 }
 .contact-form>input, .contact-form>textarea{
     display: block;
@@ -171,14 +178,18 @@
 .contact-form>textarea{
     height: 83px;
     padding-top: 8px;
+    margin-bottom: 3px;
 }
 .contact-wrap>div{
     position: relative;
+    width: 300px;
+    float: left;
 }
 .contact-wrap>div>img{
     position: absolute;
     width: 308px;
-    bottom: -122px;
+    bottom: -126px;
+    left: -7px;
 }
 /* --------------- /contact-form --------------- */
 
@@ -208,14 +219,19 @@
 
 /* --------------- feedback-wrap --------------- */
 .feedback-wrap{
-    padding-top: 24px;
+    padding-top: 17px;
 }
 .feedback-wrap>a{
     display: block;
-    margin-left: 33px;
+    margin-left: 26px;
     padding-left: 61px;
     color: #fff;
     margin-bottom: 12px;
+    transition: color .3s ease;
+    -webkit-transition: color .3s ease;
+}
+.feedback-wrap>a:hover{
+    color: #bd0031;
 }
 .feedback-wrap .main-link{
     background: url("../img/globus.png") left no-repeat;
@@ -236,7 +252,8 @@
     padding-bottom: 236px;
     background: url('../img/clock.png') no-repeat bottom;
     background-size: 89px;
-    background-position: 184px 89px;
+    background-position: 178px 102px;
+    padding-top: 11px;
 }
 .social-wrap>a{
     width: 33px;
@@ -1253,6 +1270,88 @@
     }
     /* --------------- /site --------------- */
 
+    /* --------------- contact-form --------------- */
+    .contact-wrap>div {
+        width: 344px;
+    }
+    .contact-form {
+        width: 316px;
+        height: 100%;
+        padding: 31px 38px 0;
+        margin: -22px auto 0;
+        padding-right: 34px;
+        float: right;
+        margin-right: 10px;
+    }
+    .contact-form>input, .contact-form>textarea {
+        height: 42px;
+        margin-bottom: 11px;
+        border-radius: 2px;
+        padding-left: 10px;
+        font-size: 15px;
+    }
+    .contact-form>textarea {
+        height: 97px;
+    }
+    /* --------------- /contact-form --------------- */
+
+
+    /* --------------- feedback-wrap --------------- */
+    .contact-wrap>div>img {
+        position: absolute;
+        width: 356px;
+        bottom: -187px;
+    }
+    .feedback-wrap {
+        padding-top: 28px;
+        font-size: 17px;
+    }
+    .feedback-wrap .main-link {
+        background-size: 48px;
+        height: 61px;
+        background-position: 1px 0px;
+        padding-top: 14px;
+        margin-left: 22px;
+        margin-bottom: 8px;
+    }
+    .feedback-wrap>a {
+        padding-left: 74px;
+    }
+    .feedback-wrap .mail-link {
+        background-size: 48px;
+        height: 52px;
+        background-position: 0 1px;
+        padding-top: 14px;
+        padding-left: 70px;
+    }
+    .social-wrap>a {
+        width: 42px;
+        height: 42px;
+        margin: 0 18px;
+    }
+    .social-wrap>a:last-child{
+        margin-right: 0;
+    }
+    .social-wrap> .social-wrap-g {
+        background-size: 43px;
+        background-position: 0 -1px;
+    }
+    .social-wrap> .social-wrap-f {
+        background-size: 43px;
+    }
+    .social-wrap> .social-wrap-tw {
+        background-size: 43px;
+    }
+    .social-wrap> .social-wrap-p {
+        background-size: 43px;
+    }
+    .social-wrap {
+        padding-left: 15px;
+        background-size: 104px;
+        background-position: 211px 106px;
+    }
+    /* --------------- /feedback-wrap --------------- */
+
     /* --------------- logo --------------- */
     .logo {
         height: 39px;
@@ -1263,6 +1362,7 @@
         height: 40px;
         left: 159px;
     }
+
     /* --------------- /logo --------------- */
 
     /* --------------- menu --------------- */
@@ -1300,6 +1400,8 @@
         font-size: 12px;
     }
     /* --------------- /menu --------------- */
+
+
 
     /* --------------- search --------------- */
     .search {
