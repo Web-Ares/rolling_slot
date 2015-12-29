@@ -214,13 +214,15 @@
     margin-top: -24px;
     background-size: 272px 96px;
     opacity: 1;
-    transition: opacity .3s ease, visibility .3s ease;
-    -webkit-transition: opacity .3s ease, visibility .3s ease;
+    transition: background .3s ease;
+    -webkit-transition: background .3s ease;
 }
 .btn:hover{
-    transition: opacity .3s ease, visibility .3s ease;
-    -webkit-transition: opacity .3s ease, visibility .3s ease;
-    opacity: 0.7;
+    transition: background .3s ease;
+    -webkit-transition: background .3s ease;
+    background: url("../img/submit-btn-hover.png");
+    background-repeat: no-repeat;
+    background-size: 272px 96px;
 }
 /* --------------- /btn --------------- */
 
@@ -1320,10 +1322,17 @@
         text-transform: uppercase;
         font-weight: 700;
         margin-top: -33px;
-        background-size: 316px 110px;
+        background-size: 318px 110px;
         opacity: 1;
-        transition: opacity .3s ease, visibility .3s ease;
-        -webkit-transition: opacity .3s ease, visibility .3s ease;
+        transition: background .3s ease;
+        -webkit-transition: background .3s ease;
+    }
+    .btn:hover {
+        transition: background .3s ease;
+        -webkit-transition: background .3s ease;
+        background: url("../img/submit-btn-hover.png");
+        background-repeat: no-repeat;
+        background-size: 318px 110px;
     }
     /* --------------- /btn --------------- */
     /* --------------- feedback-wrap --------------- */
@@ -1975,6 +1984,13 @@
         margin-left: -38px;
         height: 115px;
         margin-top: -33px;
+        background-size: 324px 114px;
+    }
+    .btn:hover {
+        transition: background .3s ease;
+        -webkit-transition: background .3s ease;
+        background: url("../img/submit-btn-hover.png");
+        background-repeat: no-repeat;
         background-size: 324px 114px;
     }
     /* --------------- /search --------------- */
