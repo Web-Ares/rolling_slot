@@ -236,13 +236,23 @@ input[type="search"]::-webkit-search-cancel-button {
     background-repeat: no-repeat;
     background-size: 272px 96px;
 }
-.btn_more{
+.menu__aside .btn_more{
+    display: inline-block;
     width: auto;
     height: 40px;
-    margin: 0 auto;
+    margin: 0 0 20px 21px;
+    padding: 11px 47px 0;
     border: 3px solid #4b4457;
+    font-size: 15px;
+    font-weight: 400;
     text-align: center;
     background: none;
+    transition: background-color .3s ease;
+    -webkit-transition: background-color .3s ease;
+}
+.menu__aside .btn_more:hover{
+    color: #fff;
+    background-color: #4b4457;
 }
 /* --------------- /btn --------------- */
 
@@ -1782,10 +1792,11 @@ input[type="search"]::-webkit-search-cancel-button {
     }
     .site__aside{
         position: absolute;
-        top: 24px;
+        top: 0;
         left: 0;
         display: block;
         width: 235px;
+        padding-top: 24px;
         overflow: hidden;
     }
     .site__title{
