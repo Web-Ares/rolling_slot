@@ -93,7 +93,6 @@
 }
 .site__wrap-center {
     margin-bottom: 11px;
-    max-width: 729px;
 }
 .site__header {
     position: relative;
@@ -1075,10 +1074,9 @@
     font-size: 19px;
     display: block;
     line-height: 22px;
-    text-align: center;
 }
 .wizard__gradient{
-
+    width: 100% !important;
 }
 .wizard__spins {
     margin-bottom: 11px;
@@ -1912,6 +1910,7 @@
     /* --------------- slots--------------- */
     .slots ul {
         margin-bottom: 24px;
+        padding-bottom: 21px;
     }
     /* --------------- /slots--------------- */
 
