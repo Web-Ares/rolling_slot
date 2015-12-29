@@ -104,7 +104,8 @@ input[type="search"]::-webkit-search-cancel-button {
     padding: 0 6.5px;
 }
 .site__wrap-center {
-    margin-bottom: 11px;
+    max-width: 729px;
+    margin: 0 auto 11px;
 }
 .site__header {
     position: relative;
@@ -156,19 +157,22 @@ input[type="search"]::-webkit-search-cancel-button {
 /* --------------- contact-form --------------- */
 .contact-wrap{
     background: #14111b;
+    background: url("../img/spacebg.jpg");
+    background-size: cover;
     border: 1px solid #373146;
-    margin: 0 5px 100px 5px;
+    margin: 0 5px 180px 5px;
+    padding: 0 12px;
 }
 .contact-form{
-    width: 272px;
+    min-width: 272px;
+    width: 100%;
     height: 100%;
     padding: 27px 34px 0;
     text-align: center;
     background-color: #1a1622;
     margin: -20px auto 0;
     padding-right: 29px;
-    float: right;
-    margin-right: 13px;
+    margin-bottom: 25px;
 }
 .contact-wrap:after{
     content: '';
@@ -194,7 +198,8 @@ input[type="search"]::-webkit-search-cancel-button {
 .contact-wrap>div{
     position: relative;
     width: 300px;
-    float: left;
+    margin: 0 auto;
+    left: -10px;
 }
 .contact-wrap>div>img{
     position: absolute;
@@ -209,6 +214,8 @@ input[type="search"]::-webkit-search-cancel-button {
     background: url("../img/submit-btn.png");
     border: none;
     width: 270px;
+    position: relative;
+    top: 25px;
     margin-left: -33px;
     height: 98px;
     background-repeat: no-repeat;
@@ -216,15 +223,18 @@ input[type="search"]::-webkit-search-cancel-button {
     color: #cac6d5;
     text-transform: uppercase;
     font-weight: 700;
+    margin-top: -24px;
     background-size: 272px 96px;
     opacity: 1;
-    transition: opacity .3s ease, visibility .3s ease;
-    -webkit-transition: opacity .3s ease, visibility .3s ease;
+    transition: background .3s ease;
+    -webkit-transition: background .3s ease;
 }
 .btn:hover{
-    transition: opacity .3s ease, visibility .3s ease;
-    -webkit-transition: opacity .3s ease, visibility .3s ease;
-    opacity: 0.7;
+    transition: background .3s ease;
+    -webkit-transition: background .3s ease;
+    background: url("../img/submit-btn-hover.png");
+    background-repeat: no-repeat;
+    background-size: 272px 96px;
 }
 .btn_more{
     width: auto;
@@ -1287,6 +1297,7 @@ input[type="search"]::-webkit-search-cancel-button {
     /* --------------- contact-form --------------- */
     .contact-wrap>div {
         width: 344px;
+        float: left;
     }
     .contact-form {
         width: 316px;
@@ -1295,7 +1306,7 @@ input[type="search"]::-webkit-search-cancel-button {
         margin: -22px auto 0;
         padding-right: 34px;
         float: right;
-        margin-right: 10px;
+
     }
     .contact-form>input, .contact-form>textarea {
         height: 42px;
@@ -1307,9 +1318,38 @@ input[type="search"]::-webkit-search-cancel-button {
     .contact-form>textarea {
         height: 97px;
     }
+    .contact-wrap {
+        margin: 0 5px 186px 5px;
+    }
     /* --------------- /contact-form --------------- */
-
-
+    /* --------------- btn--------------- */
+    .btn {
+        background: url("../img/submit-btn.png");
+        border: none;
+        width: 316px;
+        position: relative;
+        top: 28px;
+        margin-left: -38px;
+        height: 111px;
+        background-repeat: no-repeat;
+        font-size: 19px;
+        color: #cac6d5;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-top: -33px;
+        background-size: 318px 110px;
+        opacity: 1;
+        transition: background .3s ease;
+        -webkit-transition: background .3s ease;
+    }
+    .btn:hover {
+        transition: background .3s ease;
+        -webkit-transition: background .3s ease;
+        background: url("../img/submit-btn-hover.png");
+        background-repeat: no-repeat;
+        background-size: 318px 110px;
+    }
+    /* --------------- /btn --------------- */
     /* --------------- feedback-wrap --------------- */
     .contact-wrap>div>img {
         position: absolute;
@@ -1916,7 +1956,53 @@ input[type="search"]::-webkit-search-cancel-button {
         right: 7px;
         width: 29px;
         height: 32px;
-        background-size: 22px 21px;
+        background-size: 22px 23px;
+    }
+    /* --------------- /search --------------- */
+
+    /* --------------- /search --------------- */
+    .contact-form {
+        width: 322px;
+        float: right;
+        margin-right: 12px;
+    }
+    .contact-form>input, .contact-form>textarea {
+        height: 43px;
+        font-size: 17px;
+    }
+    .contact-wrap {
+        margin: 0 0 186px 5px;
+    }
+    .contact-form>textarea {
+        height: 99px;
+    }
+    .feedback-wrap .main-link {
+        margin-bottom: 11px;
+    }
+    .social-wrap {
+        background-position: 194px 109px;
+    }
+    .contact-wrap>div>img {
+        width: 361px;
+        bottom: -197px;
+        left: -45px;
+    }
+    .contact-wrap>div {
+        margin-bottom: 6px;
+    }
+    .btn {
+        width: 322px;
+        margin-left: -38px;
+        height: 115px;
+        margin-top: -33px;
+        background-size: 324px 114px;
+    }
+    .btn:hover {
+        transition: background .3s ease;
+        -webkit-transition: background .3s ease;
+        background: url("../img/submit-btn-hover.png");
+        background-repeat: no-repeat;
+        background-size: 324px 114px;
     }
     /* --------------- /search --------------- */
 
