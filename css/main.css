@@ -300,8 +300,8 @@ input[type="search"]::-webkit-search-cancel-button {
     display: inline-block;
     margin: 0 14px;
     opacity: 1;
-    transition: opacity .3s ease, visibility .3s ease;
-    -webkit-transition: opacity .3s ease, visibility .3s ease;
+    transition: transform .3s ease;
+    -webkit-transition: transform .3s ease;
 }
 .social-wrap> .social-wrap-g{
     background: url("../img/social-g.png") left no-repeat;
@@ -324,7 +324,8 @@ input[type="search"]::-webkit-search-cancel-button {
     background-position: 0 -1px;
 }
 .social-wrap>a:hover{
-    opacity: 0.5;
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
 }
 /* --------------- /feedback-wrap --------------- */
 
