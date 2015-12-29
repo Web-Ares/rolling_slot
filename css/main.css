@@ -215,6 +215,14 @@
     -webkit-transition: opacity .3s ease, visibility .3s ease;
     opacity: 0.7;
 }
+.btn_more{
+    width: auto;
+    height: 40px;
+    margin: 0 auto;
+    border: 3px solid #4b4457;
+    text-align: center;
+    background: none;
+}
 /* --------------- /btn --------------- */
 
 /* --------------- feedback-wrap --------------- */
@@ -467,10 +475,6 @@
     border-left-color: #bd0031;
     border-width: 3px;
     margin-top: -3px;
-}
-.menu.active .menu__wrap a.btn_aside{
-    padding-left: 0;
-    margin-top: 15px;
 }
 /* --------------- /menu --------------- */
 
@@ -1796,24 +1800,6 @@
         font-size: 13px;
         padding-left: 33px;
     }
-    .menu__aside .btn_aside{
-        height: 33px;
-        margin-top: 15px;
-        padding-top: 9px;
-        padding-left: 0;
-        font-size: 15px;
-    }
-    .menu__aside .btn_aside:after{
-        display: none;
-    }
-    .menu__home{
-        position: static;
-        display: inline-block;
-        width: 61px;
-        height: 53px;
-        background-size: auto;
-        vertical-align: middle;
-    }
     /* --------------- /menu --------------- */
 
     /* --------------- search --------------- */
@@ -1857,6 +1843,7 @@
         left: 0;
         display: block;
         width: 235px;
+        overflow: hidden;
     }
     .site__title{
         font-size: 24px;
@@ -1868,6 +1855,23 @@
         padding-right: 0;
     }
     /* ---------------/site--------------- */
+
+    /* ---------------menu--------------- */
+    .menu__aside dt{
+        height: auto;
+        font-size: 15px;
+    }
+    .menu__aside ul {
+        padding: 5px 0 14px;
+    }
+    .menu__aside li a,
+    .menu__wrap li a{
+        margin: 3px 5px 17px 21px;
+        padding-left: 10px;
+        height: auto;
+        font-size: 15px;
+    }
+    /* ---------------/menu--------------- */
 
     /* --------------- search --------------- */
     .search{
@@ -1909,16 +1913,6 @@
         background-size: 22px 23px;
     }
     /* --------------- /search --------------- */
-
-    /* --------------- menu__aside --------------- */
-    .menu__aside dt{
-        font-size: 15px;
-    }
-    .menu__aside li a,
-    .menu__wrap li a{
-        margin: 21px 5px 22px;
-    }
-    /* --------------- /menu__aside --------------- */
 
     /* --------------- slots --------------- */
     .slots__item {
