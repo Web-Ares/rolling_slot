@@ -604,6 +604,7 @@
     height: 158px;
     border: 2px solid #292436;
     text-align: center;
+    background: #14111b;
 }
 .slots ul li:nth-child(1),
 .slots ul li:nth-child(2),
@@ -1237,7 +1238,7 @@
 
     /* --------------- /wizard --------------- */
     .header-slider {
-        margin-bottom: 16px;
+        margin-bottom: 8px;
     }
     /* --------------- /wizard --------------- */
 
@@ -1269,6 +1270,11 @@
         line-height: 28px;
         padding-right: 190px;
         letter-spacing: 0;
+    }
+    .center-content{
+        background: #14111b;
+        padding: 8px 0 40px;
+        margin-bottom: 25px;
     }
     /* --------------- /site --------------- */
 
@@ -1703,7 +1709,6 @@
     }
     .site__content-layout{
         margin-bottom: 17px;
-        background-color: #14111b;
     }
     .site__footer{
         position: absolute;
@@ -1828,6 +1833,7 @@
     .site__content-layout {
         position: relative;
         padding: 0;
+        background-color: #14111b;
     }
     .site__wrap-center {
         max-width: 737px;
@@ -1981,6 +1987,10 @@
     .slider .slider__item{
         display: inline-block;
         vertical-align: middle;
+        transition: opacity .3s ease;
+    }
+    .slider__item:hover{
+        opacity: 0.7;
     }
     .slider_next,
     .slider_prev{
