@@ -31,10 +31,16 @@ $(function(){
 
     $(window).on({
         'resize': function () {
-            contentHeight();
+            if($(window).width() >= 1007) {
+                contentHeight();
+            } else {
+                $('.site__content-layout').css('min-height', 'auto');
+            }
         },
         'load': function() {
-            contentHeight();
+            if($(window).width() >= 1007) {
+                contentHeight();
+            }
         }
     })
 

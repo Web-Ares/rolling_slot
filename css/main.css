@@ -1293,6 +1293,7 @@ input[type="search"]::-webkit-search-cancel-button {
         margin-bottom: 48px;
     }
     .site__content-layout {
+        min-height: auto;
         padding: 0 20px;
     }
     .site__title {
