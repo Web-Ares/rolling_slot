@@ -637,6 +637,7 @@ input[type="search"]::-webkit-search-cancel-button {
     height: 158px;
     border: 2px solid #292436;
     text-align: center;
+    background: #14111b;
 }
 .slots ul li:nth-child(1),
 .slots ul li:nth-child(2),
@@ -1270,7 +1271,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
     /* --------------- /wizard --------------- */
     .header-slider {
-        margin-bottom: 16px;
+        margin-bottom: 8px;
     }
     /* --------------- /wizard --------------- */
 
@@ -1302,6 +1303,11 @@ input[type="search"]::-webkit-search-cancel-button {
         line-height: 28px;
         padding-right: 190px;
         letter-spacing: 0;
+    }
+    .center-content{
+        background: #14111b;
+        padding: 8px 0 40px;
+        margin-bottom: 25px;
     }
     /* --------------- /site --------------- */
 
@@ -1779,7 +1785,6 @@ input[type="search"]::-webkit-search-cancel-button {
     }
     .site__content-layout{
         margin-bottom: 17px;
-        background-color: #14111b;
     }
     .site__footer{
         position: absolute;
@@ -2094,6 +2099,10 @@ input[type="search"]::-webkit-search-cancel-button {
     .slider .slider__item{
         display: inline-block;
         vertical-align: middle;
+        transition: opacity .3s ease;
+    }
+    .slider__item:hover{
+        opacity: 0.7;
     }
     .slider_next,
     .slider_prev{
