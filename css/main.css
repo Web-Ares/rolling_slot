@@ -1591,13 +1591,6 @@
         height: 52px;
         border-bottom-width: 3px;
     }
-    .site__aside{
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        width: 235px;
-    }
     .site__content-layout{
         margin-bottom: 17px;
         background-color: #14111b;
@@ -1745,18 +1738,26 @@
         padding: 0;
     }
     .site__wrap-center {
+        max-width: 737px;
         margin-left: 235px;
         margin-bottom: 11px;
-        max-width: 737px;
+        padding-top: 22px;
     }
-    .mobile_none{
+    .site__aside{
+        position: absolute;
+        top: 24px;
+        left: 0;
         display: block;
-        padding-right: 0;
+        width: 235px;
     }
     .site__title{
         font-size: 24px;
         padding-bottom: 20px;
         margin-bottom: 21px;
+    }
+    .mobile_none{
+        display: block;
+        padding-right: 0;
     }
     /* ---------------/site--------------- */
 
@@ -1801,6 +1802,16 @@
     }
     /* --------------- /search --------------- */
 
+    /* --------------- menu__aside --------------- */
+    .menu__aside dt{
+        font-size: 15px;
+    }
+    .menu__aside li a,
+    .menu__wrap li a{
+        margin: 21px 5px 22px;
+    }
+    /* --------------- /menu__aside --------------- */
+
     /* --------------- slots --------------- */
     .slots__item {
         width: 230px;
@@ -1836,7 +1847,8 @@
     .header-slider {
         border: none;
     }
-    .button_next, .button_prev {
+    .button_next,
+    .button_prev {
         top: 30px;
         width: 15px;
         height: 22px;
