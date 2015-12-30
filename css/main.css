@@ -226,30 +226,61 @@ input[type="search"]::-webkit-search-cancel-button {
 
 /* --------------- btn --------------- */
 .btn{
-    background: url("../img/submit-btn.png");
-    border: none;
-    width: 270px;
     position: relative;
     top: 25px;
-    margin-left: -33px;
+    width: 270px;
     height: 98px;
-    background-repeat: no-repeat;
-    font-size: 17px;
-    color: #cac6d5;
-    text-transform: uppercase;
-    font-weight: 700;
     margin-top: -24px;
-    background-size: 272px 96px;
-    opacity: 1;
-    transition: background .3s ease;
-    -webkit-transition: background .3s ease;
+    margin-left: -33px;
+    border: none;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #cac6d5;
+    z-index: 1;
 }
-.btn:hover{
-    transition: background .3s ease;
-    -webkit-transition: background .3s ease;
-    background: url("../img/submit-btn-hover.png");
-    background-repeat: no-repeat;
+.btn:before,
+.btn:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/submit-btn.png") no-repeat;
     background-size: 272px 96px;
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+    z-index: -1;
+}
+.btn:after{
+    background: url("../img/submit-btn-hover.png") no-repeat;
+    background-size: 272px 96px;
+}
+.btn:after,
+.btn:hover:before{
+    opacity: 0;
+}
+.btn:hover:after{
+    opacity: 1;
+}
+.btn_2{
+    display: block;
+    width: 133px;
+    top: 0;
+    height: 48px;
+    margin: 0 auto;
+    padding-top: 12px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.btn_2:before{
+    background: url("../img/bg-btn-2.png") no-repeat 0 -61px;
+    background-size: 133px auto;
+}
+.btn_2:after{
+    background: url("../img/bg-btn-2.png") no-repeat 0 0;
+    background-size: 133px auto;
 }
 .menu__aside .btn_more{
     display: inline-block;
@@ -269,6 +300,10 @@ input[type="search"]::-webkit-search-cancel-button {
 .menu__aside .btn_more:hover{
     color: #fff;
     background: #4b4457;
+}
+.menu__aside .btn_more:before,
+.menu__aside .btn_more:after{
+    display: none;
 }
 /* --------------- /btn --------------- */
 
@@ -1290,6 +1325,100 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 /* --------------- /wizard --------------- */
 
+/* --------------- content --------------- */
+.content{
+    padding: 0 10px;
+    font-size: 13px;
+    line-height: 16px;
+    color: #a4a1ae;
+}
+.content p{
+    margin-bottom: 15px;
+}
+.content a{
+    color: #bd0031;
+}
+.content h2{
+    margin-bottom: 10px;
+    font-weight: 300;
+    color: #bd0031;
+    text-transform: uppercase;
+}
+.content span{
+    color: #585466;
+}
+.content ul{
+    margin-bottom: 15px;
+}
+.content li{
+    position: relative;
+    margin-left: 20px;
+    padding-left: 12px;
+}
+.content li:before{
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    border-radius: 50px;
+    background-color: #bd0031;
+}
+.content__table{
+    margin-bottom: 13px;
+    padding: 13px 0;
+    border-top: 1px solid #211c2b;
+    border-bottom: 1px solid #211c2b;
+}
+.content__table td{
+    padding: 2px 10px 2px 5px;
+    color: #cac6d5;
+}
+.content__table td:first-child{
+    border-right: 2px solid #afb1b8;
+    color: #585466;
+}
+.content__quotes{
+    position: relative;
+    padding-left: 74px;
+    color: #585466;
+}
+.content__quotes span{
+    color: #bd0031;
+}
+.content__quotes:before{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 20px;
+    width: 37px;
+    height: 32px;
+    background: url("../img/icons-quotes.png") no-repeat 0 0;
+    background-size: cover;
+}
+/* --------------- /content --------------- */
+
+/* --------------- page-404 --------------- */
+.page-404{
+    padding: 13px 30px 90px;
+    color: #890328;
+    font-size: 13px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    background: url("../img/bg-404.png") no-repeat calc(50% - -19px) 56%;
+    background-size: 363px 351px;
+}
+.page-404 h1{
+    font-size: 109px;
+    font-weight: 400;
+}
+.page-404__message{
+    margin-bottom: 140px;
+}
+/* --------------- /page-404 --------------- */
+
 @media (min-width: 768px) {
 
     /* --------------- /wizard --------------- */
@@ -1372,30 +1501,34 @@ input[type="search"]::-webkit-search-cancel-button {
 
     /* --------------- btn--------------- */
     .btn {
-        background: url("../img/submit-btn.png");
-        border: none;
-        width: 316px;
-        position: relative;
         top: 28px;
-        margin-left: -38px;
+        width: 316px;
         height: 111px;
-        background-repeat: no-repeat;
-        font-size: 19px;
-        color: #cac6d5;
-        text-transform: uppercase;
-        font-weight: 700;
         margin-top: -33px;
-        background-size: 318px 110px;
-        opacity: 1;
-        transition: background .3s ease;
-        -webkit-transition: background .3s ease;
+        margin-left: -38px;
+        font-size: 19px;
+        font-weight: 700;
     }
-    .btn:hover {
-        transition: background .3s ease;
-        -webkit-transition: background .3s ease;
-        background: url("../img/submit-btn-hover.png");
-        background-repeat: no-repeat;
+    .btn:before {
         background-size: 318px 110px;
+    }
+    .btn:after {
+        background-size: 318px 110px;
+    }
+    .btn_2{
+        top: 0;
+        width: 199px;
+        height: 69px;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+    .btn_2:before {
+        background-size: 199px 196px;
+        background-position: 0 -127px;
+    }
+    .btn_2:after {
+        background-size: 199px 196px;
+        background-position: 0 -16px;
     }
     /* --------------- /btn --------------- */
 
@@ -1643,8 +1776,8 @@ input[type="search"]::-webkit-search-cancel-button {
         line-height: 19px;
         margin-bottom: 27px;
     }
-
     /* --------------- /warming --------------- */
+
     .game-pic {
         margin-bottom: 18px;
     }
@@ -1787,6 +1920,64 @@ input[type="search"]::-webkit-search-cancel-button {
         background-size: cover;
     }
     /* --------------- /wizard--------------- */
+
+    /* --------------- content --------------- */
+    .content{
+        padding: 0 20px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .content h2{
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    .content ul{
+        position: relative;
+    }
+    .content ul:before{
+        content: '';
+        position: absolute;
+        top: 8px;
+        bottom: 9px;
+        left: 22px;
+        width: 1px;
+        background-color: #bd0031;
+    }
+    .content li:before{
+        width: 5px;
+        height: 5px;
+    }
+    .content__table{
+        margin-bottom: 13px;
+        padding: 13px 0;
+        border-top: 1px solid #211c2b;
+        border-bottom: 1px solid #211c2b;
+    }
+    .content__table td{
+        padding: 3px 10px;
+    }
+    .content__quotes{
+        margin: 15px 0 25px;
+    }
+    /* --------------- /content --------------- */
+
+    /* --------------- page-404 --------------- */
+    .page-404 {
+        padding: 33px 170px 185px;
+        font-size: 22px;
+        font-weight: 500;
+        background: url("../img/bg-404.png") no-repeat calc(50% - -30px) 53%;
+        background-size: 685px 658px;
+    }
+    .page-404 h1{
+        margin-bottom: 7px;
+        font-size: 195px;
+        font-weight: 600;
+    }
+    .page-404__message {
+        margin-bottom: 276px;
+    }
+    /* --------------- /page-404 --------------- */
 }
 
 @media (min-width: 1024px) {
@@ -1799,6 +1990,12 @@ input[type="search"]::-webkit-search-cancel-button {
         height: 52px;
         margin-bottom: 176px;
         border-bottom-width: 3px;
+    }
+    .site__header_404{
+        margin-bottom: 111px;
+    }
+    .site__header_404 .sub-menu{
+        display: none;
     }
     .site__content-layout{
         margin-bottom: 17px;
@@ -1824,6 +2021,7 @@ input[type="search"]::-webkit-search-cancel-button {
         display: block;
         width: 235px;
         padding-top: 24px;
+        text-align: left;
         overflow: hidden;
     }
     .site__title{
@@ -2152,14 +2350,13 @@ input[type="search"]::-webkit-search-cancel-button {
         margin-left: -38px;
         height: 115px;
         margin-top: -33px;
-        background-size: 324px 114px;
     }
-    .btn:hover {
-        transition: background .3s ease;
-        -webkit-transition: background .3s ease;
-        background: url("../img/submit-btn-hover.png");
-        background-repeat: no-repeat;
-        background-size: 324px 114px;
+    .btn_2{
+        top: 16px;
+        width: 204px;
+        height: 74px;
+        margin: 0 auto;
+        text-align: center;
     }
     /* --------------- /search --------------- */
 
@@ -2366,4 +2563,58 @@ input[type="search"]::-webkit-search-cancel-button {
         margin-bottom: 42px;
     }
     /* --------------- /information--------------- */
+
+    /* --------------- content --------------- */
+    .content{
+        padding: 0 20px 30px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .content h2{
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    .content ul{
+        position: relative;
+    }
+    .content ul:before{
+        content: '';
+        position: absolute;
+        top: 8px;
+        bottom: 9px;
+        left: 22px;
+        width: 1px;
+        background-color: #bd0031;
+    }
+    .content li:before{
+        width: 5px;
+        height: 5px;
+    }
+    .content__table{
+        margin-bottom: 13px;
+        padding: 13px 0;
+        border-top: 1px solid #211c2b;
+        border-bottom: 1px solid #211c2b;
+    }
+    .content__table td{
+        padding: 3px 10px;
+    }
+    /* --------------- /content --------------- */
+
+    /* --------------- page-404 --------------- */
+    .page-404 {
+        padding: 0 160px 185px;
+        font-size: 24px;
+        background: url("../img/bg-404.png") no-repeat 100% 9%;
+        background-color: transparent;
+        background-size: 752px 725px;
+    }
+    .page-404 h1{
+        font-size: 220px;
+    }
+    .page-404__message {
+        margin-bottom: 276px;
+    }
+    /* --------------- /page-404 --------------- */
+
 }
