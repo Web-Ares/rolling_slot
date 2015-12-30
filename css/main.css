@@ -238,6 +238,7 @@ input[type="search"]::-webkit-search-cancel-button {
     text-transform: uppercase;
     color: #cac6d5;
     z-index: 1;
+    background: none;
 }
 .btn:before,
 .btn:after{
