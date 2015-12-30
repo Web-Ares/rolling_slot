@@ -1052,6 +1052,13 @@ input[type="search"]::-webkit-search-cancel-button {
     padding-left: 6px;
     margin-bottom:45px;
 }
+.tags a{
+    font-size: 13px;
+    color:#bd0031;
+}
+.tags a:hover{
+    text-decoration: underline;
+}
 .tags__item{
     color:#bd0031;
 }
@@ -1675,6 +1682,9 @@ input[type="search"]::-webkit-search-cancel-button {
     .tags {
         font-size: 16px;
         margin-bottom: 47px;
+    }
+    .tags a{
+        font-size: 16px;
     }
 
     /* --------------- /tags--------------- */
