@@ -12,13 +12,22 @@ $(function(){
         Slider($(this));
     });
 
+    $(document).bind('click',function(e){
+        if ($(e.target).closest('.menu').length == 0){
+            if ($('.menu').hasClass('active')) {
+                $('.menu').removeClass('active');
+                $('.site').css('min-height', '100%');
+            }
+        }
+    });
+
     $('.menu__btn').on({
         'click':function(){
             var curElem = $(this).parent();
 
             if (curElem.hasClass('active')) {
                 curElem.removeClass('active');
-                $('.site').css('min-height', 'auto');
+                $('.site').css('min-height', '100%');
             } else {
                 curElem.addClass('active');
                 menuHeight();
